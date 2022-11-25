@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megan - Mental Health</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="header"> 
+
+        <div class="content">
+            <img src="image/MentalHealthLogo.png" class="logo">
+            <h1> Welcome to Mental Help. </h1>
+            <br>
+            <p>Can I help you? Our mental health information and advice is based on evidence and the lived experiences of real people. Find out how to look after your mental health and help prevent mental ill health from developing.  </p>
+            <div class="content-button" >
+                <a href="#"><span></span> Find Out </a>
+                <a href="#"><span></span> Read More </a>
+            </div>
+            <br>
+
+            <a href="" class="button"> 2022 Collections </a>
+        </div>
+
+        <div id="Navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">GET HELP</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="Menubutton" >
+            <img src="image/menu.png" id="Menu">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <script>
+            var Menubutton = document.getElementById("Menubutton")
+            var Navbar = document.getElementById("Navbar")
+            var Menu = document.getElementById("Menu")
+            
+            Navbar.style.right = "-200px";
+
+            Menubutton.onclick = function(){
+                if(Navbar.style.right == "-200px"){
+                    Navbar.style.right = "0";
+                    Menu.src = "image/close.png";
+                }
+                else{
+                    Navbar.style.right = "-200px";
+                    Menu.src = "image/menu.png";
+                }
+            }
+
+        </script>
+
+    </section>
+
+    <!---Features-->
+
+    <section id="Feature">
+        <div class="title-text">
+            
+            <br>
+            <br>
+            <br>
+            <p>FEATURES</p>
+            <h1>Why Choose Us</h1>
+        </div>
+        <div class="FeatureBox">
+            <div class="Features">
+                <h1>Experienced Staff</h1>
+                <div class="FeaturesDescription">
+                    <div class="FeaturesIcon"></div>
+                        <div class="FeaturesText">
+                            <p>Hi guysss</p>
+                        </div>
+                </div>
+            </div>
+            <div class="Features-img">
+                <img src="image/certificate.jpg">
+            </div>
+        </div>
+        </section>
+
+    <p> Mental Health</p>
+    
+    
+</body>
+</html>
