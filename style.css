@@ -1,6 +1,8 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 @media screen and (max-width: 770px) {
     .content h1 {
@@ -10,9 +12,12 @@
         display: block;
         margin: 20px auto;
     }
+    .HOME{
+        background-size: auto;
+    }
     
 }
-.header{
+#HOME{
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(rgba(0,0,0,0.005),#f3ccf6), url(image/DoctorBlackgound.jpeg);
@@ -37,7 +42,9 @@
     position: fixed;
     right: -200px;
     top: 0;
-    background-color: pink;
+    background: #ffabb2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc97e, #ffabb2);
+    background: linear-gradient(to right, #ffc97e, #ffabb2); 
     z-index: 2;
     transition: 1s;
 
@@ -51,17 +58,48 @@ nav{
 nav ul li {
     list-style: none;
     margin: 50px 20px;
+    transition: transform .5s;
+    font-family: 'Abril Fatface', cursive;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: grey;
+    color: rgb(138, 128, 128);
+    
 }
 
-#Menubutton {
+nav ul li:hover{
+    text-decoration: none;
+    transform: translateY(-7px);
+
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    color: rgb(89, 5, 5);
+
+}
+
+
+#Navbar .Button{
+    background: linear-gradient(45deg, #87adfe, #ff77cd);
+    border-radius: 6px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 10px 8px 22px rgba(100, 30, 70, 0.15);
+
+}
+
+
+#NavButton {
     width: 40px;
     height: 40px;
-    background-color: rgba(248, 169, 183, 0.897);
+    background: #FFAFBD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD); 
+    background: linear-gradient(to right, #ffc3a0, #FFAFBD); 
+
     text-align: center;
     position: fixed;
     right: 20px;
@@ -69,9 +107,10 @@ nav ul li a {
     border-radius: 3px;
     z-index: 3;
     cursor: pointer;
+    
 }
 
-#Menubutton img{
+#NavButton img{
     width: 25px;
     margin-top: 7px;
 }
@@ -137,12 +176,17 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     box-shadow: 3px 8px 22px rgba(100, 30, 70, 0.15);
+    transition: transform .5s;
+}
+
+.content .button:hover{
+    transform: translateY(10px);
 }
 
 /*--feature--*/
 #feature {
     width: 100%;
-    padding: 70px 0;
+    padding: 100px 0;
 
 }
 
@@ -159,6 +203,7 @@ nav ul li a {
     position: relative;
     z-index: 1;
     display: inline-block;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .title-text p::after{
@@ -177,9 +222,11 @@ nav ul li a {
 
 .title-text h1{
     font-size: 50px;
+    color: rgb(203, 126, 228);
+    font-family: 'Amatic SC', cursive;
 }
 
-.FeatureBox{
+.Depression-Box{
     width: 80%;
     margin: auto;
     display: flex;
@@ -188,15 +235,485 @@ nav ul li a {
     text-align: center;
 }
 
-.Features {
+.Depression {
     flex-basis: 50%;
 }
 
-.Features-img{
+.Depression-img{
     flex-basis: 50%;
     margin: auto;
 }
 
-.Features-img img{
+.Depression-img img{
     width: 70%;
 }
+
+.Depression h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: rgb(159, 64, 191);
+    font-family: 'Abril Fatface', cursive;
+}
+
+.Depression-Description{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.Depression-Logo .fa-sharp{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #f3ccf6;
+    border: 2px solid;
+
+}
+
+.Depression-Text p, .Depression-Text li{
+    padding: 0 20px;
+    text-align: left;
+}
+
+
+@media screen and (max-width: 770px) {
+    .title-text h1{
+        font-size: 35px;
+    }
+    .Depression {
+        flex-basis: 100%;
+    }
+    .Depression-img{
+        flex-basis: 100%;
+    }
+
+    .Depression-img img{
+        width: 100%;
+    }
+}
+
+/*--Counselling--*/
+
+#Counselling{
+    width: 100%;
+    padding: 70px 0;
+    background-color: #efefef;
+
+}
+
+.Counselling-Box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.Single-Counselling{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: rgb(171, 155, 155);
+    position: relative;
+}
+
+.Single-Counselling img{
+    width: 100%;
+    border-radius: 7px;
+
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    background: linear-gradient(rgba(0,0,0,0.5),#f3ccf6);
+    cursor: pointer;
+    opacity: 0;
+    transition: 1s;
+}
+
+.Single-Counselling:hover .overlay{
+    opacity: 1;
+}
+
+.Counselling-Description{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+
+}
+
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.Counselling-Description p{
+    font-size: 14px;
+}
+
+.Single-Counselling:hover .Counselling-Description{
+    bottom: 40%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 770px) {
+    .Single-Counselling{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .Counselling-Description p{
+        font-size: 12px;
+    }
+
+    hr{
+        margin: 5px auto;
+    }
+
+    .Single-Counselling:hover .Counselling-Description{
+        bottom: 25%;
+    }
+}
+
+/*---Testimonial--*/
+
+#Testimonial{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.Testimonial-Row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.Testimonial-Cloumn{
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #019587;
+    cursor: pointer;
+    transition: transform .5s;
+
+
+}
+
+.Testimonial-Cloumn p{
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+.Client{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.Client img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+
+.Clent-Info .fa-sharp{
+    margin-left: 10px;
+    color: #27c0ff;
+    font-size: 20px;
+}
+
+.Clent-Info small{
+    margin-left: 10px;
+    color: #27c0ff;
+    font-size: 20px;;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+.Testimonial-Cloumn:hover{
+    transform: translateY(10px);
+}
+
+@media screen and (max-width: 770px) {
+    .Testimonial-Cloumn{
+        flex-basis: 100%;
+    }
+}
+
+#Footer{
+    padding: 50px 0 20px;
+    background-color: #e2a8ba;
+    position: relative;
+}
+
+.Footer-Row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Footer-Left, .Footer-Right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.Footer-Right{
+    text-align: right;
+}
+
+.Footer-Row h1{
+    margin: 10px 0;
+    color: rgb(68, 32, 80);
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.Footer-Row p{
+    line-height: 35px;
+    color: rgb(0, 0, 0);
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.Footer-Left .fa-sharp, .Footer-Right .fa-sharp{
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+}
+
+.Footer-img{
+    max-width: 370px;
+    opacity: 0.1;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+
+}
+
+.Social-Link{
+    text-align: center;
+}
+
+.Social-Link .fa-brands{
+    height: 60px;
+    width: 60px;
+    font-size: 40px;
+    line-height: 60px;
+    margin: 60px 6px 0;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.Social-Link .fa-brands:hover{
+    background: #222a3d;
+    color: #fff;
+    border-radius: 50%;
+    transform: scaleX(1.2);
+}
+
+.Social-Link .p{
+    font-size: 12px;
+    margin-top: 20px;
+    color: #222a3d;
+}
+
+@media screen and (max-width: 770px) {
+    .Footer-Left, .Footer-Right{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+
+    .Footer-img{
+        top: 25%;
+    }
+}
+
+/*---Include Smooth Scroll on your site.---*/
+
+#MailingList{
+    padding: 100px 0 20px;
+    background: #FFEEEE; 
+    background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  
+    background: linear-gradient(to right, #DDEFBB, #FFEEEE); 
+    
+}
+
+.MailingList_Info{
+    margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: rgb(0, 0, 0);
+    
+
+}
+.MailingList_Info h1, h2{
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.SignupBtn{
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+}
+
+
+
+.SignupBtn:hover {
+  background: #F6F9FE;
+  color: #770e85;
+}
+
+.SignupBtn:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.SignupBtn:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.SignupBtn:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.SignupBtn:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.SignupBtn:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.SignupBtn:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.SignupBtn:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.btn-primary{
+  background-color: #00f06c;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #00f06c;
+}
+
+.btn-danger {
+    background-color: #d20c0c;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .btn-danger:hover,
+  .btn-danger:focus {
+    background-color: #d20c0c;
+  }
+
+@media screen and (max-width: 770px) {
+    .MailingList_Info h1{
+        font-size: 35px;
+    }
+    .MailingList {
+        flex-basis: 100%;
+    }
+
+    .MailingList .table {
+        width: 100%;
+      }
+    }
+
+    

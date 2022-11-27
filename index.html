@@ -6,50 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Megan - Mental Health</title>
     <link rel="stylesheet" href="style.css"> 
+    <script src="Javascript.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amatic+SC:wght@700&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">  
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
 <body>
-    <section class="header"> 
-
-        <div class="content">
-            <img src="image/MentalHealthLogo.png" class="logo">
-            <h1> Welcome to Mental Help. </h1>
-            <br>
-            <p>Can I help you? Our mental health information and advice is based on evidence and the lived experiences of real people. Find out how to look after your mental health and help prevent mental ill health from developing.  </p>
-            <div class="content-button" >
-                <a href="#"><span></span> Find Out </a>
-                <a href="#"><span></span> Read More </a>
-            </div>
-            <br>
-
-            <a href="" class="button"> 2022 Collections </a>
-        </div>
-
+        <!-- Navbar Section -->
         <div id="Navbar">
             <nav>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">GET HELP</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                <ul class="Navbar_Menu">
+                    <li class="Navbar_Info"><a href="#HOME" id="Home_page">HOME</a></li>
+                    <li class="Navbar_Info"><a href="#Depression"id="Depression_page" >ABOUT</a></li>
+                    <li class="Navbar_Info"><a href="#Counselling"id="Counselling_page">GET HELP</a></li>
+                    <li class="Navbar_Info"><a href="#Testimonial"id="Testimonial_page">CONTACT US</a></li>
+                    <li class="Navbar_Info"><a href="#Footer" id="Footer_page">Social Link</a></li>
+                    <a href="#Counselling" class="Button"> Get Help :) </a>
                 </ul>
             </nav>
         </div>
-        <div id="Menubutton" >
+        <div id="NavButton" >
             <img src="image/menu.png" id="Menu">
         </div>
         <br>
         <br>
-        <br>
-        <br>
         <script>
-            var Menubutton = document.getElementById("Menubutton")
+            var NavButton = document.getElementById("NavButton")
             var Navbar = document.getElementById("Navbar")
             var Menu = document.getElementById("Menu")
             
             Navbar.style.right = "-200px";
 
-            Menubutton.onclick = function(){
+            NavButton.onclick = function(){
                 if(Navbar.style.right == "-200px"){
                     Navbar.style.right = "0";
                     Menu.src = "image/close.png";
@@ -59,40 +52,398 @@
                     Menu.src = "image/menu.png";
                 }
             }
-
         </script>
+        <br>
+        <br>
+
+    <section id="HOME"> 
+        <div class="content">
+            <img src="image/MentalHealthLogo.png" class="logo">
+            <h1> Welcome to Mental Help. </h1>
+            <br>
+            <p>Can I help you? Our mental health information and advice is based on evidence and the lived experiences of real people. Find out how to look after your mental health and help prevent mental ill health from developing.  </p>
+            <div class="content-button" >
+                <a href="#Depression"><span></span> Find Out </a>
+                <a href="#MailingList"><span></span> Read More </a>
+            </div>
+            <br>
+
+            <a href="#Counselling" class="button"> Get Help :) </a>
+            <br>
+            <br>
+            <br>
+
+        </div>
+
 
     </section>
 
-    <!---Features-->
+    <!---Depression-->
 
-    <section id="Feature">
+    <section id="Depression">
         <div class="title-text">
             
             <br>
             <br>
             <br>
-            <p>FEATURES</p>
+            <p>ABOUT</p>
             <h1>Why Choose Us</h1>
         </div>
-        <div class="FeatureBox">
-            <div class="Features">
-                <h1>Experienced Staff</h1>
-                <div class="FeaturesDescription">
-                    <div class="FeaturesIcon"></div>
-                        <div class="FeaturesText">
-                            <p>Hi guysss</p>
+        <div class="Depression-Box">
+            <div class="Depression">
+                <h1>Overview of Depression</h1>
+                <div class="Depression-Description">
+                    <div class="Depression-Logo">
+                        <i class="fa-sharp fa-solid fa-check"></i>
+                    </div>
+                        <div class="Depression-Text">
+                            <p> Depression is a mood disorder that can make people feel sad and lose interest. Depression, also known as severe depression or clinical depression, can affect your feelings, thinking and behaviors, and may lead to various emotional and physical problems. You may have difficulty doing normal daily activities, and sometimes you may feel that life is worthless.
+                                Depression is not only a depression attack, but also a personality weakness, and it cannot be easily rid of it in the way of "chopping the mess with a quick knife". Depression may require long-term treatment. But don't be discouraged. Most people with depression will feel better after receiving drug treatment, psychotherapy or two-pronged therapy.
+                            </p>
+                        </div>
+                </div>
+
+                <h1>Overview of Depression</h1>
+                <div class="Depression-Description">
+                    <div class="Depression-Logo">
+                        <i class="fa-sharp fa-solid fa-check"></i>
+                    </div>
+                        <div class="Depression-Text">
+                            <p> Depression is a mood disorder that can make people feel sad and lose interest. Depression, also known as severe depression or clinical depression, can affect your feelings, thinking and behaviors, and may lead to various emotional and physical problems. You may have difficulty doing normal daily activities, and sometimes you may feel that life is worthless.
+                                Depression is not only a depression attack, but also a personality weakness, and it cannot be easily rid of it in the way of "chopping the mess with a quick knife". Depression may require long-term treatment. But don't be discouraged. Most people with depression will feel better after receiving drug treatment, psychotherapy or two-pronged therapy.
+                            </p>
+                        </div>
+                </div>
+
+                <h1>Symptoms of Depression</h1>
+                <div class="Depression-Description">
+                    <div class="Depression-Logo">
+                        <i class="fa-sharp fa-solid fa-check"></i>
+                    </div>
+                        <div class="Depression-Text">
+                            <p> Depression may only occur once in a lifetime, but usually occurs multiple times. During the attack, symptoms appear almost most of the day, which may include:</p>
+                            <list>
+                                <li>Feel depressed, teary, lonely, or hopeless.</li>
+                                <li>Unexplained physical issues such headaches or backaches.</li>
+                                <li>Anger, irritability, or frustration can be sparked by even the smallest things.</li>
+                                <li>Loss of enjoyment or interest in the majority or all of the typical activities, such as hobbies, sports, or sex.</li>
+                                <li>Sleep disorders, including insomnia or drowsiness</li>
+                                <li>Exhausted. Even if you do a few tiny tasks, it's challenging.</li>
+                                <li>Lack of appetite and weight loss, or overeating to put on weight</li>
+                                <li>Feel useless or guilty, and whine or blame past mistakes on yourself. </li>
+                                <li>It is challenging to think clearly, concentrate,make decisions, and remember things. </li>
+                                <li>Considerations about suicide, death, or attempted or actual suicide on a regular basis or repeatedly. </li>
+                            </list>
+                        </div>
+                </div>
+
+                <h1>Types of Depression</h1>
+                <div class="Depression-Description">
+                    <div class="Depression-Logo">
+                        <i class="fa-sharp fa-solid fa-check"></i>
+                    </div>
+                        <div class="Depression-Text">
+                            <P>From NHS, there are 5 types of depression.</P>
+                            <ul>Clinical depression</ul>
+                            <ul>Psychotic depression</ul>
+                            <ul>Postnatal depression</ul>
+                            <ul>seasonal affective disorder (SAD) </ul>
+
+
+
+                        </div>
+                </div>
+
+                <h1>Support with anxiety and stress</h1>
+                <div class="Depression-Description">
+                    <div class="Depression-Logo">
+                        <i class="fa-sharp fa-solid fa-check"></i>
+                    </div>
+                        <div class="Depression-Text">
+                            <p> What is anxiety?</p>
                         </div>
                 </div>
             </div>
-            <div class="Features-img">
-                <img src="image/certificate.jpg">
+            <div class="Depression-img">
+                <img src="image/StressOil.jpeg">
             </div>
         </div>
-        </section>
 
-    <p> Mental Health</p>
-    
+     </section>
+
+     <!--Counselling-->
+     <section id="Counselling"> 
+            <div class="title-text">
+                <br>
+                <br>
+                <p>GET HELP</p>
+                <h1>We provide Counselling.</h1>
+            </div>
+            <div class="Counselling-Box">
+                <div class="Single-Counselling">
+                    <img src="image/Method.jpeg">
+                    <div class="overlay"></div>
+                    <div class="Counselling-Description">
+                        <h3>See a Doctor</h3>
+                        <hr>
+                        <p> Please schedule an appointment or visit a mental health professional as soon as you feel depressed. 
+                            You can speak with trusted friends, family members, medical professionals, religious leaders, or other people if you don't want to get medical help. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="Single-Counselling">
+                    <img src="image/Method.jpeg">
+                    <div class="overlay"></div>
+                    <div class="Counselling-Description">
+                        <h3>Hair Style B</h3>
+                        <hr>
+                        <p> This is a test file. </p>
+                    </div>
+                </div>
+
+                <div class="Single-Counselling">
+                    <img src="image/Method.jpeg">
+                    <div class="overlay"></div>
+                    <div class="Counselling-Description">
+                        <h3>Hair Style C</h3>
+                        <hr>
+                        <p> This is a test file. </p>
+                    </div>
+                </div>
+
+                <div class="Single-Counselling">
+                    <img src="image/Method.jpeg">
+                    <div class="overlay"></div>
+                    <div class="Counselling-Description">
+                        <h3>Hair Style D</h3>
+                        <hr>
+                        <p> This is a test file. </p>
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <!--Testimonial-->
+    <section id="Testimonial">
+        <div class="title-text">
+            <br>
+            <br>
+            <p>Testimonial</p>
+            <h1>We provide Counselling.</h1>
+        </div>
+        <div class="Testimonial-Row">
+            <div class="Testimonial-Cloumn">
+                <div class="Client">
+                    <img src="image/HelpandSupport.jpeg">
+                    <div class="Clent-Info">
+                        <h4>KEN LAM <i class="fa-sharp fa-solid fa-user"></i></h4>
+                        <small>@kenlamm</small>
+                    </div>
+                </div>
+                <p>Depression is more than simply feeling unhappy or fed up for a few days.
+                </p>
+            </div>
+            <div class="Testimonial-Cloumn">
+                <p>Depression is more than simply feeling unhappy or fed up for a few days.
+                </p>
+            </div>
+            <div class="Testimonial-Cloumn">
+                <p>Depression is more than simply feeling unhappy or fed up for a few days.
+                </p>
+            </div>
+        </div>
+
+        <div class="Testimonial-Row">
+            <div class="Testimonial-Cloumn">
+                <p>Depression is more than simply feeling unhappy or fed up for a few days.
+                </p>
+            </div>
+            <div class="Testimonial-Cloumn">
+                <p>Depression is more than simply feeling unhappy or fed up for a few days.
+                </p>
+            </div>
+            <div class="Testimonial-Cloumn">
+                <p>Depression is more than simply feeling unhappy or fed up for a few days.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--MailingList-->
+    <section>
+        <div id="MailingList">
+            <div class="MailingList_Info">
+                <h1>Sign Up for email updates</h1>
+                <strong>Easily unsubscribe in one click from email subscriptions. Sign up today!</strong>
+
+        <form method="POST" name="sample">
+        <br>
+
+            <label for="lastname">Last Name: *</label><br />
+            <input type="text" name="lastname" id="lastname" class="Form_Info" placeholder="Last Name" required>
+            <br>
+            <br>
+            <label for="email">Email: *</label><br/>
+            <input type="email" name="email" id="email" class="Form_Info" placeholder="Email" required>
+
+            <p>Enter your details to receive our latest news.</p>
+            <br>
+            <br>
+            <input type="button" name="add" value= "Subscribe!"  onclick="addClient();" class="SignupBtn"><hr>
+                <class="btn-danger"></class>
+                <class="btn-primary"></class>
+                    <table id="tbl" class="table" border="1">
+                        <h2> Our Mailing List :)))</h2>
+                        <thead>
+                        <th>Last Name</th> 
+                        <th>Email</th>
+                        <th>Unsubscribe</th>
+                        <th>Update</th>
+                    
+                        </thead>
+                    </table>
+                    <input type="submit" value="Save Data" name="save_data" formaction="save_data.php" class="btn-Data">
+        </form>
+        </div>
+    </section>
+
+
+    <!--Footer-->
+    <section id="Footer">
+        <img src="image/MentalHealthLogo.png" class="Footer-img">
+        <div class="title-text">
+            <br>
+            <br>
+            <p>CONTACT US</p>
+            <h1>Visit Us Today.</h1>
+        </div>
+        <div class="Footer-Row">
+            <div class="Footer-Left">
+                <h1>Opening Hours</h1>
+                <p><i class="fa-sharp fa-solid fa-user"></i>Monday - Friday - 9am to 5pm </p>
+                <p><i class="fa-sharp fa-solid fa-user"></i>Saturday and Sunday - 9am to 1pm </p>
+            </div>
+            <div class="Footer-Right">
+                <h1>Get in Touch</h1>
+                <p>telephone: 12234 <i class="fa-sharp fa-solid fa-user"></i></p>
+                <p>meganlaw1028@gmail.com <i class="fa-sharp fa-solid fa-user"></i></p>
+                <p>77 white house Drive <i class="fa-sharp fa-solid fa-user"></i></p>
+            </div>
+        </div>
+        <div class="Social-Link">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <p>Copyright</p>
+
+        </div>
+
+    </section>
+    <section>
+        <script>
+            let ClientGroup = 
+                [{
+                    "name":"Ken_Tyson",
+                    "gender":"male",
+                    "age":24,
+                    "DepressionLevel":"Mild",
+                    "RecoverorNot": true, 
+                    "Symptoms":["feeling hopeless and helpless"]
+                    },
+                    {
+                    "name":"Ivy_So",
+                    "gender":"female",
+                    "age":20,
+                    "DepressionLevel":["Mild to moderate"],
+                    "RecoverorNot": false, 
+                    "Symptoms":["feeling guilt-ridden"]
+                },
+                {
+                    "name":"Kris_Wong",
+                    "gender":"male",
+                    "age":18,
+                    "DepressionLevel":"Mild",
+                    "RecoverorNot": true, 
+                    "Symptoms":["changes in weight"]
+                },
+                {
+                    "name":"Panda_Yui",
+                    "gender":"female",
+                    "age":33,
+                    "DepressionLevel":["Mild to moderate"],
+                    "RecoverorNot": true, 
+                    "Symptoms":["feeling irritable"]
+                },
+                {
+                    "name":"Edison_Hui",
+                    "gender":"male",
+                    "age":40,
+                    "DepressionLevel":["Mild to moderate"],
+                    "RecoverorNot": false, 
+                    "Symptoms":["helpless"]
+                },
+                {
+                    "name":"Jeff_Lo",
+                    "gender":"male",
+                    "age":23,
+                    "DepressionLevel":"Mild",
+                    "RecoverorNot": true, 
+                    "Symptoms":["sadness"]
+                },
+                {
+                    "name":"Marf_Holand",
+                    "gender":"female",
+                    "age":22,
+                    "DepressionLevel":["Mild to moderate"],
+                    "RecoverorNot": true, 
+                    "Symptoms":["low self-esteem"]
+                },
+                {
+                    "name":"Kaka_Kwong",
+                    "gender":"female",
+                    "age":20,
+                    "DepressionLevel":["Mild to moderate"],
+                    "RecoverorNot": true, 
+                    "Symptoms":["feeling tearful"]
+                },
+                {
+                    "name":"Raymond_Style",
+                    "gender":"male",
+                    "age":50,
+                    "DepressionLevel":["Moderate to severe"],
+                    "RecoverorNot": false, 
+                    "Symptoms":["unexplained aches and pains"]
+                },
+                {
+                    "name":"Marco_Hon",
+                    "gender":"male",
+                    "age":44,
+                    "DepressionLevel":["Moderate to severe"],
+                    "RecoverorNot": false, 
+                    "Symptoms":["lack of energy"]
+                },
+                {
+                    "name":"Mary_Lee",
+                    "gender":"female",
+                    "age":25,
+                    "DepressionLevel":["Mild to moderate"],
+                    "RecoverorNot": false, 
+                    "Symptoms":["disturbed sleep"]
+                },
+                {
+                    "name":"William_Liu",
+                    "gender":"male",
+                    "age":29,
+                    "DepressionLevel":["Moderate to severe"],
+                    "RecoverorNot": true, 
+                    "Symptoms":["unexplained aches and pains"]
+                }
+                ]
+            console.log(JSON.parse(ClientGroup))
+        </script>
+    </section>
     
 </body>
 </html>
