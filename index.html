@@ -5,16 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Megan - Mental Health</title>
+<!-- link for CSS file -->
     <link rel="stylesheet" href="style.css"> 
+<!-- Add Javascript -->
     <script src="Javascript.js"></script>
+<!-- Add fonts CDN from google: https://fonts.google.com -->
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amatic+SC:wght@700&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">  
-    <!-- CSS only -->
+<!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<!-- Add Icon - fontswesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Add Icon - https://github.com/cferdinandi/smooth-scroll -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<!-- Add Icon - jQuery -->
+    <scrirt src="https://code.jquery.com/jquery-3.5.1.min.js"></sclipt>
+<!-- Add Icon - https://github.com/shrikumarinfotech/form-to-json -->
+    <script src="./includes/js/form-to-json-v1.0.0.js"></script>
+<!-- add the Pusher Vanilla JavaScript Library - CDN (For Comment Box)-->
+    <script type="text/javascript" src="https://js.pusher.com/3.2/pusher.min.js"></script>
+<!-- add D3 - CDN -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
         <!-- Navbar Section -->
@@ -24,17 +37,16 @@
                     <li class="Navbar_Info"><a href="#HOME" id="Home_page">HOME</a></li>
                     <li class="Navbar_Info"><a href="#Depression"id="Depression_page" >ABOUT</a></li>
                     <li class="Navbar_Info"><a href="#Counselling"id="Counselling_page">GET HELP</a></li>
-                    <li class="Navbar_Info"><a href="#Testimonial"id="Testimonial_page">CONTACT US</a></li>
+                    <li class="Navbar_Info"><a href="#Advice"id="Advice_page">CONTACT US</a></li>
                     <li class="Navbar_Info"><a href="#Footer" id="Footer_page">Social Link</a></li>
-                    <a href="#Counselling" class="Button"> Get Help :) </a>
+                    <button class="Button"> <a href="#Counselling"  > Get Help :) </a></button>
                 </ul>
             </nav>
         </div>
         <div id="NavButton" >
             <img src="image/menu.png" id="Menu">
         </div>
-        <br>
-        <br>
+
         <script>
             var NavButton = document.getElementById("NavButton")
             var Navbar = document.getElementById("Navbar")
@@ -53,8 +65,6 @@
                 }
             }
         </script>
-        <br>
-        <br>
 
     <section id="HOME"> 
         <div class="content">
@@ -81,7 +91,7 @@
     <!---Depression-->
 
     <section id="Depression">
-        <div class="title-text">
+        <div class="Title_font">
             
             <br>
             <br>
@@ -91,18 +101,6 @@
         </div>
         <div class="Depression-Box">
             <div class="Depression">
-                <h1>Overview of Depression</h1>
-                <div class="Depression-Description">
-                    <div class="Depression-Logo">
-                        <i class="fa-sharp fa-solid fa-check"></i>
-                    </div>
-                        <div class="Depression-Text">
-                            <p> Depression is a mood disorder that can make people feel sad and lose interest. Depression, also known as severe depression or clinical depression, can affect your feelings, thinking and behaviors, and may lead to various emotional and physical problems. You may have difficulty doing normal daily activities, and sometimes you may feel that life is worthless.
-                                Depression is not only a depression attack, but also a personality weakness, and it cannot be easily rid of it in the way of "chopping the mess with a quick knife". Depression may require long-term treatment. But don't be discouraged. Most people with depression will feel better after receiving drug treatment, psychotherapy or two-pronged therapy.
-                            </p>
-                        </div>
-                </div>
-
                 <h1>Overview of Depression</h1>
                 <div class="Depression-Description">
                     <div class="Depression-Logo">
@@ -166,6 +164,12 @@
             </div>
             <div class="Depression-img">
                 <img src="image/StressOil.jpeg">
+                <br><br><br><br><br><br><br><br><br><br>
+                <img src="image/depression.jpeg">
+                <br><br><br><br><br><br><br><br><br><br>
+                <img src="image/Method.jpeg">
+                <br> <br><br><br><br><br><br><br><br><br>
+
             </div>
         </div>
 
@@ -173,7 +177,7 @@
 
      <!--Counselling-->
      <section id="Counselling"> 
-            <div class="title-text">
+            <div class="Title_font">
                 <br>
                 <br>
                 <p>GET HELP</p>
@@ -181,42 +185,41 @@
             </div>
             <div class="Counselling-Box">
                 <div class="Single-Counselling">
-                    <img src="image/Method.jpeg">
+                    <img src="image/Service01.jpeg">
                     <div class="overlay"></div>
                     <div class="Counselling-Description">
                         <h3>See a Doctor</h3>
                         <hr>
                         <p> Please schedule an appointment or visit a mental health professional as soon as you feel depressed. 
-                            You can speak with trusted friends, family members, medical professionals, religious leaders, or other people if you don't want to get medical help. 
                         </p>
                     </div>
                 </div>
 
                 <div class="Single-Counselling">
-                    <img src="image/Method.jpeg">
+                    <img src="image/Service02.jpeg">
                     <div class="overlay"></div>
                     <div class="Counselling-Description">
-                        <h3>Hair Style B</h3>
+                        <h3>Phone Counselling</h3>
                         <hr>
                         <p> This is a test file. </p>
                     </div>
                 </div>
 
                 <div class="Single-Counselling">
-                    <img src="image/Method.jpeg">
+                    <img src="image/Service03.jpeg">
                     <div class="overlay"></div>
                     <div class="Counselling-Description">
-                        <h3>Hair Style C</h3>
+                        <h3>Depression Assessment</h3>
                         <hr>
                         <p> This is a test file. </p>
                     </div>
                 </div>
 
                 <div class="Single-Counselling">
-                    <img src="image/Method.jpeg">
+                    <img src="image/Service04.jpeg">
                     <div class="overlay"></div>
                     <div class="Counselling-Description">
-                        <h3>Hair Style D</h3>
+                        <h3>Self-Help</h3>
                         <hr>
                         <p> This is a test file. </p>
                     </div>
@@ -225,51 +228,212 @@
             </div>
     </section>
 
-    <!--Testimonial-->
-    <section id="Testimonial">
-        <div class="title-text">
+    </section>
+    <section id="Search">
+        <div class="Searchlist">
+        <div class="input-group">
+            <input type="text" id="myInput" onkeyup="Searchlist()" class="form-control rounded" 
+            placeholder="Search for names" aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="SearchButton">search</button>
+        </div>
+
+            <!-- <table class="table align-middle mb-0 bg-white"> -->
+                <table id="myTable">
+                <thead class="bg-light">
+                    <tr class="header">
+                        <th style="width:20%;">Name</th>
+                        <th style="width:20%;">Age</th>
+                        <th style="width:20%;">Gender</th>
+                        <th style="width:20%;">Depression Level</th>
+                        <th style="width:20%;">Recover or Not</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img
+                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+                            alt=""
+                            style="width: 45px; height: 45px"
+                            class="rounded-circle"
+                            />
+                        <div class="ms-3">
+                          <p class="fw-bold mb-1">John Doe</p>
+                          <p class="text-muted mb-0">john.doe@gmail.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="fw-normal mb-1">Software engineer</p>
+                      <p class="text-muted mb-0">IT department</p>
+                    </td>
+                    <td>
+                      <span class="badge badge-success rounded-pill d-inline">Active</span>
+                    </td>
+                    <td>Senior</td>
+                    <td>
+                      <button type="button" class="btn btn-link btn-sm btn-rounded">
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img
+                            src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                            class="rounded-circle"
+                            alt=""
+                            style="width: 45px; height: 45px"
+                            />
+                        <div class="ms-3">
+                          <p class="fw-bold mb-1">Alex Ray</p>
+                          <p class="text-muted mb-0">alex.ray@gmail.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="fw-normal mb-1">Consultant</p>
+                      <p class="text-muted mb-0">Finance</p>
+                    </td>
+                    <td>
+                      <span class="badge badge-primary rounded-pill d-inline"
+                            >Onboarding</span
+                        >
+                    </td>
+                    <td>Junior</td>
+                    <td>
+                      <button
+                              type="button"
+                              class="btn btn-link btn-rounded btn-sm fw-bold"
+                              data-mdb-ripple-color="dark"
+                              >
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img
+                            src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                            class="rounded-circle"
+                            alt=""
+                            style="width: 45px; height: 45px"
+                            />
+                        <div class="ms-3">
+                          <p class="fw-bold mb-1">Kate Hunington</p>
+                          <p class="text-muted mb-0">kate.hunington@gmail.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="fw-normal mb-1">Designer</p>
+                      <p class="text-muted mb-0">UI/UX</p>
+                    </td>
+                    <td>
+                      <span class="badge badge-warning rounded-pill d-inline">Awaiting</span>
+                    </td>
+                    <td>Senior</td>
+                    <td>
+                      <button
+                              type="button"
+                              class="btn btn-link btn-rounded btn-sm fw-bold"
+                              data-mdb-ripple-color="dark"
+                              >
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
             <br>
             <br>
-            <p>Testimonial</p>
+        </div>
+    </section>
+
+    <!--Advice-->
+    <section id="Advice">
+        <div class="Title_font">
+            <br>
+            <br>
+            <p>Advice</p>
             <h1>We provide Counselling.</h1>
         </div>
-        <div class="Testimonial-Row">
-            <div class="Testimonial-Cloumn">
+        <div class="Advice-Row">
+            <div class="Advice-Cloumn">
                 <div class="Client">
-                    <img src="image/HelpandSupport.jpeg">
+                    <img src="image/Doctor01.jpeg">
                     <div class="Clent-Info">
-                        <h4>KEN LAM <i class="fa-sharp fa-solid fa-user"></i></h4>
-                        <small>@kenlamm</small>
+                        <h4> Delia Mallory <i class="fa-solid fa-user-doctor"></i></h4>
+                        <small>@Deliayyy.</small>
                     </div>
                 </div>
                 <p>Depression is more than simply feeling unhappy or fed up for a few days.
                 </p>
             </div>
-            <div class="Testimonial-Cloumn">
+            <div class="Advice-Cloumn">
+                <div class="Client">
+                    <img src="image/Doctor02.jpeg">
+                    <div class="Clent-Info">
+                        <h4> Simon Sparrow <i class="fa-solid fa-user-doctor"></i></h4>
+                        <small>@DR_S_Sparrow_</small>
+                    </div>
+                </div>
                 <p>Depression is more than simply feeling unhappy or fed up for a few days.
                 </p>
-            </div>
-            <div class="Testimonial-Cloumn">
+            </div>            <div class="Advice-Cloumn">
+                <div class="Client">
+                    <img src="image/Doctor03.jpeg">
+                    <div class="Clent-Info">
+                        <h4> Iris Marchant <i class="fa-solid fa-user-nurse"></i></h4>
+                        <small>@IrisMarchant0309</small>
+                    </div>
+                </div>
                 <p>Depression is more than simply feeling unhappy or fed up for a few days.
                 </p>
             </div>
         </div>
 
-        <div class="Testimonial-Row">
-            <div class="Testimonial-Cloumn">
+        <div class="Advice-Row">
+            <div class="Advice-Cloumn">
+                <div class="Client">
+                    <img src="image/Doctor04.jpeg">
+                    <div class="Clent-Info">
+                        <h4>Richard Grimsdyke<i class="fa-solid fa-user-doctor"></i></h4>
+                        <small>@Richard_Grimsdyke</small>
+                    </div>
+                </div>
                 <p>Depression is more than simply feeling unhappy or fed up for a few days.
                 </p>
             </div>
-            <div class="Testimonial-Cloumn">
+            <div class="Advice-Cloumn">
+                <div class="Client">
+                    <img src="image/Doctor05.jpeg">
+                    <div class="Clent-Info">
+                        <h4>Isobel Minster <i class="fa-solid fa-user-nurse"></i></h4>
+                        <small>@IsobMinsterrr</small>
+                    </div>
+                </div>
                 <p>Depression is more than simply feeling unhappy or fed up for a few days.
                 </p>
             </div>
-            <div class="Testimonial-Cloumn">
+            <div class="Advice-Cloumn">
+                <div class="Client">
+                    <img src="image/Doctor06.jpeg">
+                    <div class="Clent-Info">
+                        <h4>Donald Sinden <i class="fa-solid fa-user-doctor"></i></h4>
+                        <small>@DonaldSinden__</small>
+                    </div>
+                </div>
                 <p>Depression is more than simply feeling unhappy or fed up for a few days.
                 </p>
             </div>
         </div>
     </section>
+
     <!--MailingList-->
     <section>
         <div id="MailingList">
@@ -296,11 +460,10 @@
                     <table id="tbl" class="table" border="1">
                         <h2> Our Mailing List :)))</h2>
                         <thead>
-                        <th>Last Name</th> 
-                        <th>Email</th>
-                        <th>Unsubscribe</th>
-                        <th>Update</th>
-                    
+                            <th style="width:30%;">Last Name</th> 
+                            <th style="width:40%;">Email</th>
+                            <th style="width:15%;">Unsubscribe</th>
+                            <th style="width:15%;">Update</th>
                         </thead>
                     </table>
                     <input type="submit" value="Save Data" name="save_data" formaction="save_data.php" class="btn-Data">
@@ -308,11 +471,10 @@
         </div>
     </section>
 
-
     <!--Footer-->
     <section id="Footer">
         <img src="image/MentalHealthLogo.png" class="Footer-img">
-        <div class="title-text">
+        <div class="Title_font">
             <br>
             <br>
             <p>CONTACT US</p>
@@ -337,113 +499,7 @@
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-whatsapp"></i>
             <p>Copyright</p>
-
         </div>
-
-    </section>
-    <section>
-        <script>
-            let ClientGroup = 
-                [{
-                    "name":"Ken_Tyson",
-                    "gender":"male",
-                    "age":24,
-                    "DepressionLevel":"Mild",
-                    "RecoverorNot": true, 
-                    "Symptoms":["feeling hopeless and helpless"]
-                    },
-                    {
-                    "name":"Ivy_So",
-                    "gender":"female",
-                    "age":20,
-                    "DepressionLevel":["Mild to moderate"],
-                    "RecoverorNot": false, 
-                    "Symptoms":["feeling guilt-ridden"]
-                },
-                {
-                    "name":"Kris_Wong",
-                    "gender":"male",
-                    "age":18,
-                    "DepressionLevel":"Mild",
-                    "RecoverorNot": true, 
-                    "Symptoms":["changes in weight"]
-                },
-                {
-                    "name":"Panda_Yui",
-                    "gender":"female",
-                    "age":33,
-                    "DepressionLevel":["Mild to moderate"],
-                    "RecoverorNot": true, 
-                    "Symptoms":["feeling irritable"]
-                },
-                {
-                    "name":"Edison_Hui",
-                    "gender":"male",
-                    "age":40,
-                    "DepressionLevel":["Mild to moderate"],
-                    "RecoverorNot": false, 
-                    "Symptoms":["helpless"]
-                },
-                {
-                    "name":"Jeff_Lo",
-                    "gender":"male",
-                    "age":23,
-                    "DepressionLevel":"Mild",
-                    "RecoverorNot": true, 
-                    "Symptoms":["sadness"]
-                },
-                {
-                    "name":"Marf_Holand",
-                    "gender":"female",
-                    "age":22,
-                    "DepressionLevel":["Mild to moderate"],
-                    "RecoverorNot": true, 
-                    "Symptoms":["low self-esteem"]
-                },
-                {
-                    "name":"Kaka_Kwong",
-                    "gender":"female",
-                    "age":20,
-                    "DepressionLevel":["Mild to moderate"],
-                    "RecoverorNot": true, 
-                    "Symptoms":["feeling tearful"]
-                },
-                {
-                    "name":"Raymond_Style",
-                    "gender":"male",
-                    "age":50,
-                    "DepressionLevel":["Moderate to severe"],
-                    "RecoverorNot": false, 
-                    "Symptoms":["unexplained aches and pains"]
-                },
-                {
-                    "name":"Marco_Hon",
-                    "gender":"male",
-                    "age":44,
-                    "DepressionLevel":["Moderate to severe"],
-                    "RecoverorNot": false, 
-                    "Symptoms":["lack of energy"]
-                },
-                {
-                    "name":"Mary_Lee",
-                    "gender":"female",
-                    "age":25,
-                    "DepressionLevel":["Mild to moderate"],
-                    "RecoverorNot": false, 
-                    "Symptoms":["disturbed sleep"]
-                },
-                {
-                    "name":"William_Liu",
-                    "gender":"male",
-                    "age":29,
-                    "DepressionLevel":["Moderate to severe"],
-                    "RecoverorNot": true, 
-                    "Symptoms":["unexplained aches and pains"]
-                }
-                ]
-            console.log(JSON.parse(ClientGroup))
-        </script>
-    </section>
-    
+        </section>
 </body>
 </html>

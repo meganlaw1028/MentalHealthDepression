@@ -183,19 +183,23 @@ nav ul li a:hover{
     transform: translateY(10px);
 }
 
-/*--feature--*/
-#feature {
+/*--Depression--*/
+#Depression {
     width: 100%;
     padding: 100px 0;
-
+    background: #febfc8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f6dee0, #febfc8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f6dee0, #febfc8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
 }
 
-.title-text{
+.Title_font{
     text-align: center;
     padding-bottom: 70px;
 }
 
-.title-text p{
+.Title_font p{
     margin: auto;
     font-size: 35px;
     color: rgb(120, 205, 176);
@@ -206,7 +210,7 @@ nav ul li a:hover{
     font-family: 'Abril Fatface', cursive;
 }
 
-.title-text p::after{
+.Title_font p::after{
     content: "";
     width: 50px;
     height: 35px;
@@ -220,7 +224,7 @@ nav ul li a:hover{
     border-bottom-right-radius: 50px;
 }
 
-.title-text h1{
+.Title_font h1{
     font-size: 50px;
     color: rgb(203, 126, 228);
     font-family: 'Amatic SC', cursive;
@@ -236,11 +240,11 @@ nav ul li a:hover{
 }
 
 .Depression {
-    flex-basis: 50%;
+    flex-basis: 70%;
 }
 
 .Depression-img{
-    flex-basis: 50%;
+    flex-basis: 30%;
     margin: auto;
 }
 
@@ -280,7 +284,7 @@ nav ul li a:hover{
 
 
 @media screen and (max-width: 770px) {
-    .title-text h1{
+    .Title_font h1{
         font-size: 35px;
     }
     .Depression {
@@ -300,7 +304,10 @@ nav ul li a:hover{
 #Counselling{
     width: 100%;
     padding: 70px 0;
-    background-color: #efefef;
+    background: #fceabb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 
 }
 
@@ -317,12 +324,14 @@ nav ul li a:hover{
     text-align: center;
     border-radius: 7px;
     margin-bottom: 20px;
-    color: rgb(171, 155, 155);
+    color: rgb(35, 22, 22);
     position: relative;
 }
 
 .Single-Counselling img{
     width: 100%;
+    max-width: 480px;
+    max-height: 275px;
     border-radius: 7px;
 
 }
@@ -333,7 +342,7 @@ nav ul li a:hover{
     position: absolute;
     top: 0;
     border-radius: 7px;
-    background: linear-gradient(rgba(0,0,0,0.5),#f3ccf6);
+    background: linear-gradient(rgba(0,0,0,0.60),#fff,#d6a4a4);
     cursor: pointer;
     opacity: 0;
     transition: 1s;
@@ -389,14 +398,17 @@ hr{
     }
 }
 
-/*---Testimonial--*/
+/*---Advice--*/
 
-#Testimonial{
+#Advice{
     width: 100%;
     padding: 70px 0;
+    background: #c8f7df;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FAFFD1, #c8f7df);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FAFFD1, #c8f7df); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.Testimonial-Row{
+.Advice-Row{
     width: 80%;
     margin: auto;
     display: flex;
@@ -405,19 +417,23 @@ hr{
     flex-wrap: wrap;
 }
 
-.Testimonial-Cloumn{
+.Advice-Cloumn{
     flex-basis: 28%;
     padding: 10px;
     margin-bottom: 30px;
     border-radius: 5px;
-    box-shadow: 0 10px 20px 3px #019587;
+    box-shadow: 0 10px 20px 3px #f6e979;
+    background: #d9a7c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     cursor: pointer;
     transition: transform .5s;
 
 
 }
 
-.Testimonial-Cloumn p{
+.Advice-Cloumn p{
     font-size: 14px;
     color: rgb(0, 0, 0);
 }
@@ -429,37 +445,47 @@ hr{
 }
 
 .Client img{
-    width: 40px;
+    max-width: 100px;
+    max-height: 100px;
     margin-right: 20px;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
-.Clent-Info .fa-sharp{
+.Clent-Info h4{
+    font-size: 20px;
+}
+.Clent-Info .fa-soild{
     margin-left: 10px;
-    color: #27c0ff;
+    color: #253c45;
     font-size: 20px;
 }
 
 .Clent-Info small{
     margin-left: 10px;
     color: #27c0ff;
-    font-size: 20px;;
-    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 15px;;
+    font-family: 'Playfair Display', serif;
 }
 
-.Testimonial-Cloumn:hover{
+
+.Advice-Cloumn:hover{
     transform: translateY(10px);
 }
 
 @media screen and (max-width: 770px) {
-    .Testimonial-Cloumn{
+    .Advice-Cloumn{
         flex-basis: 100%;
     }
 }
 
 #Footer{
     padding: 50px 0 20px;
-    background-color: #e2a8ba;
+    background: #9796f0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffbbcc, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+
     position: relative;
 }
 
@@ -551,9 +577,10 @@ hr{
 
 #MailingList{
     padding: 100px 0 20px;
-    background: #FFEEEE; 
-    background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  
-    background: linear-gradient(to right, #DDEFBB, #FFEEEE); 
+    background: #acb6e5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b8e8df, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b8e8df, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     
 }
 
@@ -716,4 +743,87 @@ hr{
       }
     }
 
+    #myInput {
+        background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+        background-position: 10px 12px; /* Position the search icon */
+        background-repeat: no-repeat; /* Do not repeat the icon image */
+        width: 100%; /* Full-width */
+        font-size: 16px; /* Increase font-size */
+        padding: 12px 20px 12px 40px; /* Add some padding */
+        border: 1px solid #ddd; /* Add a grey border */
+        margin-bottom: 12px; /* Add some space below the input */
+      }
+      
+      #myTable {
+        border-collapse: collapse; /* Collapse borders */
+        width: 100%; /* Full-width */
+        border: 1px solid #ddd; /* Add a grey border */
+        font-size: 18px; /* Increase font-size */
+      }
+      
+      #myTable th, #myTable td {
+        text-align: left; /* Left-align text */
+        padding: 12px; /* Add padding */
+      }
+      
+      #myTable tr {
+        /* Add a bottom border to all table rows */
+        border-bottom: 1px solid #ddd; 
+      }
+      
+      #myTable tr.header, #myTable tr:hover {
+        /* Add a grey background color to the table header and on hover */
+        background-color: #f1f1f1;
+      }
+
+#Search {
+    padding: 100px 0 20px;
+    background: #F8FFAE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top,  #9ac6bd,#F8FFAE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #9ac6bd,#F8FFAE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
+    }
+
+.Searchlist{
+        margin-left: 5%;
+        margin-right: 5%;
+        color: rgb(0, 0, 0);
+    }
+
+.input-group input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 50%;
+        background: #f1f1f1;
+      }
+      
+/* Style the submit button */
+
+.input-group button {
+        float: right;
+        width: 20%;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none; /* Prevent double borders */
+        cursor: pointer;
+      }
+      
+.input-group button:hover {
+        background: #0b7dda;
+      }
+      
+      /* Clear floats */
+.input-group::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    
+table {
+    background-color: #bcd1cf;
+}
