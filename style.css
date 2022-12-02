@@ -5,7 +5,7 @@
     scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 900px) {
     .content h1 {
         font-size: 50px;
     }
@@ -249,6 +249,8 @@ nav ul li a:hover {
 .Title_font {
     text-align: center;
     padding-bottom: 60px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .Title_font p {
@@ -289,10 +291,14 @@ nav ul li a:hover {
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .Depression {
     flex-basis: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .Depression-img {
@@ -338,6 +344,7 @@ nav ul li a:hover {
     border-radius: 8px;
     color: #6e2e73;
     border: 4px solid;
+    padding-left: 7px;
 }
 
 .Depression-Text p,
@@ -361,6 +368,8 @@ nav ul li a:hover {
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    grid-auto-flow: repeat(auto-fill, minmax(150px, 1fr));
+    align-items: center;
 }
 
 .rangebar:hover {
@@ -399,7 +408,7 @@ nav ul li a:hover {
     color: #455a6b;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 900px) {
     .Title_font h1 {
         font-size: 35px;
     }
@@ -408,12 +417,19 @@ nav ul li a:hover {
     }
     .Depression-Description {
         flex-basis: 100%;
+        width: 700px;
+
     }
     .Depression-img {
-        flex-basis: 100%;
+        flex-basis: 0%;
     }
     .Depression-img img {
+        width: 00%;
+    }
+    .rangebar{
+        flex-basis: 100%;
         width: 100%;
+        
     }
 }
 
@@ -434,16 +450,18 @@ nav ul li a:hover {
     background-color: rgba(248, 246, 236, 0.8);
     margin-left: 10%;
     margin-right: 10%;
-    width: 500px;
-    height: 500px;
+    min-width: 500px;
+    min-height: 500px;
+    grid-auto-flow: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 #myMap {
     background-color: rgba(248, 246, 236, 0.8);
     margin-left: 10%;
     margin-right: 10%;
-    width: 500px;
-    height: 500px;
+    min-width: 500px;
+    min-height: 500px;
+    grid-auto-flow: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 
@@ -531,7 +549,7 @@ hr {
     opacity: 1;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 900px) {
     .Single-Counselling {
         flex-basis: 100%;
         margin-bottom: 30px;
@@ -625,7 +643,7 @@ hr {
     transform: translateY(10px);
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 900px) {
     .Advice-Cloumn {
         flex-basis: 100%;
     }
@@ -716,7 +734,7 @@ hr {
     color: #222a3d;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 900px) {
     .Footer-Left,
     .Footer-Right {
         flex-basis: 100%;
@@ -742,9 +760,11 @@ hr {
 
 .MailingList_Info {
     margin: auto;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     color: rgb(0, 0, 0);
+    align-items: center;
+    grid-auto-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 .MailingList_Info h1,
@@ -963,6 +983,7 @@ h2 {
     font-size: 14px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     position: relative;
+    grid-auto-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 #StaffList table th {
@@ -971,7 +992,7 @@ h2 {
     letter-spacing: 1px;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 900px) {
     .MailingList_Info h1 {
         font-size: 35px;
     }
@@ -1089,7 +1110,7 @@ table {
     background: #c7d0e1;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 900px) {
     #StaffRecord {
         width: 100%;
     }
