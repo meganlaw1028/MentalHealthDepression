@@ -1,82 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Megan - Mental Health</title>
-<!-- link for CSS file -->
-    <link rel="stylesheet" href="style.css"> 
-<!-- Add Javascript -->
+    <!-- link for CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Javascript -->
     <script src="Javascript.js"></script>
-<!-- Add fonts CDN from google: https://fonts.google.com -->
+    <!-- Add fonts CDN from google: https://fonts.google.com -->
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amatic+SC:wght@700&family=EB+Garamond:wght@500&family=Playfair+Display:wght@400;500;600&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
-<!-- bootstrap -->
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<!-- Add Icon - fontswesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- Add Icon - https://github.com/cferdinandi/smooth-scroll -->
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-<!-- Add Icon - jQuery -->
-    <scrirt src="https://code.jquery.com/jquery-3.5.1.min.js"></sclipt>
-<!-- Add Icon - https://github.com/shrikumarinfotech/form-to-json -->
-    <script src="./includes/js/form-to-json-v1.0.0.js"></script>
-<!-- add the Pusher Vanilla JavaScript Library - CDN (For Comment Box)-->
-    <script type="text/javascript" src="https://js.pusher.com/3.2/pusher.min.js"></script>
-<!-- add D3 - CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- Add Icon - fontswesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- Add Icon - jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
+    <!-- add D3 - CDN -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    <!-- add Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>
+    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
 </head>
+
 <body>
-        <!-- Navbar Section -->
-        <div id="Navbar">
-            <nav>
-                <ul class="Navbar_Menu">
-                    <li class="Navbar_Info"><a href="#HOME" id="Home_page">HOME</a></li>
-                    <li class="Navbar_Info"><a href="#Depression"id="Depression_page" >ABOUT</a></li>
-                    <li class="Navbar_Info"><a href="#Counselling"id="Counselling_page">GET HELP</a></li>
-                    <li class="Navbar_Info"><a href="#Advice"id="Advice_page">CONTACT US</a></li>
-                    <li class="Navbar_Info"><a href="#Footer" id="Footer_page">MORE INFO</a></li>
-                </ul>
-                <button class="HelpButton"> <a href="#Counselling"  > Seek Help NOW </a></button>
-            </nav>
-        </div>
-        <div id="NavButton" >
-            <img src="image/menu.png" id="Menu">
-        </div>
+    <!-- Navbar Section -->
+    <div id="Navbar">
+        <nav>
+            <ul class="Navbar_Menu">
+                <!-- Navbar Section 
+                <form id="SearchingWeb" role="search">
+                    <input type="search" id="search" placeholder="Search..." aria-label="Search through site content">
+                </form>-->
+                <script>
+                    const f = document.getElementById('SearchingWeb');
+                    const q = document.getElementById('query');
+                    const google = 'https://www.google.com/search?q=site%3A+';
+                    const site = 'pagedart.com';
 
-        <script>
-            var NavButton = document.getElementById("NavButton")
-            var Navbar = document.getElementById("Navbar")
-            var Menu = document.getElementById("Menu")
-            
-            Navbar.style.right = "-200px";
+                    function submitted(event) {
+                        event.preventDefault();
+                        const url = google + site + '+' + q.value;
+                        const win = window.open(url, '_blank');
+                        win.focus();
+                    }
 
-            NavButton.onclick = function(){
-                if(Navbar.style.right == "-200px"){
-                    Navbar.style.right = "0";
-                    Menu.src = "image/close.png";
-                }
-                else{
-                    Navbar.style.right = "-200px";
-                    Menu.src = "image/menu.png";
-                }
-            }
-        </script>
+                    f.addEventListener('submit', submitted);
+                </script>
+                <li class="Navbar_Info"><a href="#HOME" id="Home_page">HOME</a></li>
+                <li class="Navbar_Info"><a href="#Depression" id="Depression_page">ABOUT</a></li>
+                <li class="Navbar_Info"><a href="#LargeChart" id="LargeChart_page">RECENT DATA</a></li>
+                <li class="Navbar_Info"><a href="#Counselling" id="Counselling_page">GET HELP</a></li>
+                <li class="Navbar_Info"><a href="#StaffListid" id="Staff_page">HELP FROM US</a></li>
+                <li class="Navbar_Info"><a href="#Advice" id="Advice_page">SELF HELP</a></li>
+                <li class="Navbar_Info"><a href="#Footer" id="Footer_page">MORE INFO</a></li>
+            </ul>
+            <button class="HelpButton"> <a href="#Counselling"  > Seek Help NOW </a></button>
+        </nav>
+        <div data-bs-spy="scroll" data-bs-target="#Navbar" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0"></div>
 
-    <section id="HOME"> 
+    </div>
+
+    <div id="NavButton">
+        <img src="image/menu.png" id="Menu">
+        <script src="menu.js"></script>
+    </div>
+
+
+    <section id="HOME">
         <div class="content">
-            <img src="image/MentalHealthLogo.png" class="logo">
+            <img src="" id="logo">
+            <script src="home_logo.js"></script>
             <h1> Welcome to Mental Help. </h1>
-            
             <strong>Do you need any help with your depression?</strong>
             <br>
             <br>
-            <p> Our knowledge and recommendations about mental health are supported by data and real-life experiences.           
-                Learn how to maintain your mental health and prevent the occurrence of mental disorders.</p>
-            <div class="content-button" >
+            <p> Our knowledge and recommendations about mental health are supported by data and real-life experiences. Learn how to maintain your mental health and prevent the occurrence of mental disorders.</p>
+            <div class="content-button">
                 <a href="#Depression"><span></span> Find Out </a>
                 <a href="#MailingList"><span></span> Read More </a>
             </div>
@@ -102,467 +112,401 @@
             <h1>WHAT IS DEPRESSION?</h1>
         </div>
         <div class="Depression-Box">
-            <div class="Depression">
-                <h1>Overview of Depression</h1>
-                <div class="Depression-Description">
-                    <div class="Depression-Logo">
-                        <i class="fa-solid fa-circle-question"></i>
-                    </div>
-                        <div class="Depression-Text">
-                            <p> Major depressive disorder, sometimes known as depression, 
-                                is a serious medical condition that frequently affects people's feelings,  thoughts, and behaviours.
-                                The main symptom of depression is long-term persistent depression, 
-                                which will affect the daily life of patients.
-                                Mild depression can only be depressed, 
-                                which may not affect daily life, 
-                                but it may make patients feel difficult and meaningless. 
-                                In the most serious case, 
-                                depression can threaten life and make patients suicidal.
-                            </p>
-                        </div>
-                        <div class="Depression-img">
-                            <img src="image/depression.jpeg">
-                        </div>
-                </div>
+            <br>
+            <br>
+            <h3>How are you feeling today?</h3>
+            </label>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="80" class="rangebar" id="RangeBar">
+                <br><br>
+                <p>Happy Value: <span id="RangeValue"></span>/100</p>
+            </div>
 
-                <h1>Symptoms of Depression</h1>
-                <div class="Depression-Description">
-                    <div class="Depression-Logo">
-                        <i class="fa-solid fa-face-sad-tear"></i>
-                    </div>
-                        <div class="Depression-Text">
-                            <p> Depression may only occur once in a lifetime, but usually occurs multiple times. During the attack, symptoms appear almost most of the day, which may include:</p>
-                            <list>
-                                <li>Feel depressed, teary, lonely, or hopeless.</li>
-                                <li>Unexplained physical issues such headaches or backaches.</li>
-                                <li>Anger, irritability, or frustration can be sparked by even small things.</li>
-                                <li>Loss of enjoyment or interest in most of the activities.</li>
-                                <li>Sleep disorders, including insomnia or drowsiness</li>
-                                <li>Exhausted. Even if you do a few tiny tasks, it's challenging.</li>
-                                <li>Lack of appetite and weight loss, or overeating to put on weight</li>
-                                <li>Feel guilty, feel worthless, and disappointed with yourself. </li>
-                                <li>It is challenging to concentrate, make decisions, and remember things. </li>
-                                <li>Considerations about suicide appears. </li>
-                            </list>
-                        </div>
-                        <div class="Depression-img">
-                            <img src="image/StressOil.jpeg">
-                        </div>
-                </div>
+            <script>
+                var slider = document.getElementById("RangeBar");
+                var output = document.getElementById("RangeValue");
+                output.innerHTML = slider.value;
 
-                <h1>Types of Depression</h1>
-                <div class="Depression-Description">
-                    <div class="Depression-Logo">
-                        <i class="fa-solid fa-filter"></i>
-                    </div>
-                        <div class="Depression-Text">
-                            <P>According to NHS, there are 3 level of depression stage, 
-                                mild, moderate or serve, and 5 types of depression: </P>
-                            <ul>Clinical depression</ul>
-                            <ul>Psychotic depression</ul>
-                            <ul>Postnatal depression</ul>
-                            <ul>seasonal affective disorder (SAD) </ul>
-                        </div>
-                        <div class="Depression-img">
-                            <img src="image/Method.jpeg">
-                        </div>
-                </div>
+                slider.oninput = function() {
+                    output.innerHTML = this.value;
+                }
+            </script>
         </div>
         </div>
-
-     </section>
-
-     <!--Counselling-->
-     <section id="Counselling"> 
-            <div class="Title_font">
-                <br>
-                <br>
-                <p>GET HELP</p>
-                <br>
-                <h1>We provide Counselling.</h1>
+        <div class="Depression">
+            <h1>Overview of Depression</h1>
+            <div class="Depression-Description">
+                <div class="Depression-Logo">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <div class="Depression-Text">
+                    <p id="WhatisDepression"></p>
+                    <script src="WhatisDepression.js"></script>
+                </div>
+                <div class="Depression-img">
+                    <img src="" id="DepressionBlue">
+                    <script src="DepressionBlue.js">
+                    </script>
+                </div>
             </div>
-            <div class="Counselling-Box">
-                <div class="Single-Counselling">
-                    <img src="image/Service01.jpeg">
-                    <div class="Counselling_Cover"></div>
-                    <div class="Counselling-Description">
-                        <h3>Psychotherapy for Depression</h3>
-                        <hr>
-                        <p> It's important to seek help from a doctor if you think you may be depressed.
-                            Schedule an appointment or visit a mental health professional as soon as you feel depressed. 
-                        </p>
-                    </div>
-                </div>
 
-                <div class="Single-Counselling">
-                    <img src="image/Service02.jpeg">
-                    <div class="Counselling_Cover"></div>
-                    <div class="Counselling-Description">
-                        <h3>Online Therapy</h3>
-                        <hr>
-                        <p> If you are nervous about seeing a specialist and prefer to discuss your concerns in a familiar place, 
-                            a telephone or online consultation may be the right option for you.</p>
-                    </div>
+            <h1>Symptoms of Depression</h1>
+            <div class="Depression-Description">
+                <div class="Depression-Logo">
+                    <i class="fa-solid fa-face-sad-tear"></i>
                 </div>
-
-                <div class="Single-Counselling">
-                    <img src="image/Service03.webp">
-                    <div class="Counselling_Cover"></div>
-                    <div class="Counselling-Description">
-                        <h3>Medication for depression</h3>
-                        <hr>
-                        <p> Although medication is typically not a long-term solution, 
-                            it may help with some of the symptoms.
-                            The effect of drugs varies from person to person. 
-                            You can discuss your treatment plan with your doctor first.  </p>
-                    </div>
+                <div class="Depression-Text">
+                    <list id="Symptoms_of_Depression"></list>
+                    <script src="Symptoms_of_Depression.js"></script>
                 </div>
-
-                <div class="Single-Counselling">
-                    <img src="image/Service04.jpeg">
-                    <div class="Counselling_Cover"></div>
-                    <div class="Counselling-Description">
-                        <h3>Self-Help</h3>
-                        <hr>
-                        <p> Self-help may be the first treatment choice provided by the doctor, 
-                            especially if you experience mild depression. 
-                            This is because it can be carried out immediately, 
-                            and there is a chance to make you feel better directly.</p>
-                    </div>
+                <div class="Depression-img">
+                    <img src="image/StressOil.jpeg">
                 </div>
-                
             </div>
-    </section>
 
+            <h1>Types of Depression</h1>
+            <div class="Depression-Description">
+                <div class="Depression-Logo">
+                    <i class="fa-solid fa-filter"></i>
+                </div>
+                <div class="Depression-Text">
+                    <P>According to Debra Fulghum Bruce, PHD(2021): </P>
+                </div>
+                <div class="Depression-img">
+                    <img src="image/Method.jpeg">
+                </div>
+            </div>
+        </div>
+        </div>
+        <br>
+
+        <div class="Searchlist">
+            <div class="input-group">
+                <input type="text" id="SearchingInput" onkeyup="Searchlist()" class="form-control rounded" placeholder="Search for names" aria-label="Search" aria-describedby="search-addon" />
+                <button type="button" class="SearchButton">search</button>
+                <script src="SearchingList.js"></script>
+            </div>
+            <!--https://www.webmd.com/depression/guide/depression-types#091e9c5e80074279-3-7-->
+            <!-- <table class="table align-middle mb-0 bg-white"> https://mdbootstrap.com/docs/standard/data/tables/ -->
+            <table id="StaffRecord">
+                <thead>
+                    <tr class="StaffRecordHeader">
+                        <th style="width:20%;">Type</th>
+                        <th style="width:40%;">Description</th>
+                        <th style="width:40%;">Depression Symptoms</th>
+                    </tr>
+                </thead>
+                <tbody id="StaffRecordTable">
+                    <!-- Prodcuts from javascript file in here. -->
+                </tbody>
+            </table>
+            <script src="StaffRecord.js"></script>
+            <br><br>
+        </div>
+        <br>
     </section>
-    <section id="Search">
+    <!--LargeChart-->
+    <section id="LargeChart">
         <div class="Title_font">
             <br>
             <br>
-            <p>Our Client Record</p>
+            <p> Recent Data in UK</p>
             <br>
-            <h1>Data from our customers for sharing.</h1>
-        </div>
-        <div class="Searchlist">
-        <div class="input-group">
-            <input type="text" id="myInput" onkeyup="Searchlist()" class="form-control rounded" 
-            placeholder="Search for names" aria-label="Search" aria-describedby="search-addon" />
-            <button type="button" class="SearchButton">search</button>
+            <h1>The number of people suffering from depression is increasing.</h1>
         </div>
 
-            <!-- <table class="table align-middle mb-0 bg-white"> https://mdbootstrap.com/docs/standard/data/tables/ -->
-                <table id="Client_Record">
-                <thead class="bg-light">
-                    <tr class="header">
-                        <th style="width:20%;">Name</th>
-                        <th style="width:20%;">Age</th>
-                        <th style="width:20%;">Gender</th>
-                        <th style="width:20%;">Depression Level</th>
-                        <th style="width:20%;">Recover or Not</th>
+        <div>
+            <canvas id="myChart"></canvas>
+            <script src="BarChart.js"></script>
+        </div>
+        <br>
+        <br>
+        <div>
+            <canvas id="myMap"></canvas>
+            <script src="Map.js"></script>
+        </div>
+        <br>
+        <br>
+    </section>
+
+    <!--Counselling-->
+    <section id="Counselling">
+        <div class="Title_font">
+            <br>
+            <br>
+            <p>GET HELP</p>
+            <br>
+            <h1>We provide Counselling.</h1>
+        </div>
+        <div class="Counselling-Box">
+            <div class="Single-Counselling">
+                <img src="image/Service01.jpeg">
+                <div class="Counselling_Cover"></div>
+                <div class="Counselling-Description">
+                    <h3>Psychotherapy for Depression</h3>
+                    <hr>
+                    <p> It's important to seek help from a doctor if you think you may be depressed. Schedule an appointment or visit a mental health professional as soon as you feel depressed.
+                    </p>
+                </div>
+            </div>
+
+            <div class="Single-Counselling">
+                <img src="image/Service02.jpeg">
+                <div class="Counselling_Cover"></div>
+                <div class="Counselling-Description">
+                    <h3>Online Therapy</h3>
+                    <hr>
+                    <p> If you are nervous about seeing a specialist and prefer to discuss your concerns in a familiar place, a telephone or online consultation may be the right option for you.</p>
+                </div>
+            </div>
+
+            <div class="Single-Counselling">
+                <img src="image/Service03.webp">
+                <div class="Counselling_Cover"></div>
+                <div class="Counselling-Description">
+                    <h3>Medication for depression</h3>
+                    <hr>
+                    <p> Although medication is typically not a long-term solution, it may help with some of the symptoms. The effect of drugs varies from person to person. You can discuss your treatment plan with your doctor first. </p>
+                </div>
+            </div>
+
+            <div class="Single-Counselling">
+                <img src="image/Service04.jpeg">
+                <div class="Counselling_Cover"></div>
+                <div class="Counselling-Description">
+                    <h3>Self-Help</h3>
+                    <hr>
+                    <p> Self-help may be the first treatment choice provided by the doctor, especially if you experience mild depression. This is because it can be carried out immediately, and there is a chance to make you feel better directly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="StaffListid">
+        <div class="Title_font">
+            <br>
+            <br>
+            <p>HELP FROM US</p>
+            <br>
+            <h1>We provide our staff information for Counselling.</h1>
+        </div>
+        <div id="StaffList">
+            <!--https://www.encodedna.com/javascript/populate-json-data-to-html-table-using-javascript.htm-->
+            <p>Customers can find information about our employees on our website. Not all employees; only those who have consented to let consumers contact them in advance and have an opportunity to offer suggestions or complaints about their service. We
+                try to give you a huge quantity of information, in order to give you a more true picture of our company, especially the people you will be speaking with if you decide to have any counselling services, so you feel more comfortable communicating
+                with us, our wonderful enthusiastic staff. We simply offer the employees details with their last name, business email, position of duty, and date of employment in order to verify our staff members' identities and current employment status
+                to the general public. Other details will be withheld in accordance with the Privacy Policy. </p>
+
+            <strong> If you want to see the information, just double-click the button!</strong>
+
+            <input type='button' id="StaffListBtn" value='Our Staff Data' />
+            <br>
+            <table id="MailingListTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Last Name</th>
+                        <th>Business Email</th>
+                        <th>Position</th>
                     </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img
-                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                            alt=""
-                            style="width: 45px; height: 45px"
-                            class="rounded-circle"
-                            />
-                        <div class="ms-3">
-                          <p class="fw-bold mb-1">John Doe</p>
-                          <p class="text-muted mb-0">john.doe@gmail.com</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td><p> 50</p></td>
-                    <td><span>Male</span></td>
-                    <td>Mild</td>
-                    <td><p>Recover</p></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img
-                            src="https://mdbootstrap.com/img/new/avatars/6.jpg"
-                            class="rounded-circle"
-                            alt=""
-                            style="width: 45px; height: 45px"
-                            />
-                        <div class="ms-3">
-                          <p class="fw-bold mb-1">Alex Ray</p>
-                          <p class="text-muted mb-0">alex.ray@gmail.com</p>
-                        </div>
-                      </div>
-
-                    </td>
-                    <td><p> 37</p></td>
-                    <td><span>Female</span></td>
-                    <td>Mild to moderate</td>
-                    <td><p>Recover</p></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <img
-                            src="https://mdbootstrap.com/img/new/avatars/7.jpg"
-                            class="rounded-circle"
-                            alt=""
-                            style="width: 45px; height: 45px"
-                            />
-                        <div class="ms-3">
-                          <p class="fw-bold mb-1">Kate Hunington</p>
-                          <p class="text-muted mb-0">kate.hunington@gmail.com</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td><p> 20</p></td>
-                    <td><span>Female</span></td>
-                    <td>Moderate to severe</td>
-                    <td><p>Recover</p></td>
-                  </tr>
+                <tbody id="MailingListTabletr">
+                    <class="StaffIcon></class>
+                    <!-- Prodcuts from javascript file in here. -->
                 </tbody>
-              </table>
-
-            <br>
+            </table>
             <br>
         </div>
+        <script src=" NewMailingList.js "></script>
     </section>
 
     <!--Advice-->
-    <section id="Advice">
-        <div class="Title_font">
+    <section id="Advice ">
+        <div class="Title_font ">
             <br>
             <br>
             <p>Professional Advices</p>
             <br>
             <h1>Try To Make Yourself Happier.</h1>
         </div>
-        <div class="Advice-Row">
-            <div class="Advice-Cloumn">
-                <div class="Client">
-                    <img src="image/Doctor01.jpeg">
-                    <div class="Clent-Info">
-                        <h4> Delia Mallory <i class="fa-solid fa-user-doctor"></i></h4>
+        <div class="Advice-Row ">
+            <div class="Advice-Cloumn ">
+                <div class="Client ">
+                    <img src="image/Doctor01.jpeg ">
+                    <div class="Clent-Info ">
+                        <h4> Delia Mallory <i class="fa-solid fa-user-doctor "></i></h4>
                         <small>@Deliayyy.</small>
                     </div>
                 </div>
-                <p> You may find it very difficult to tell others about your feelings, 
-                    but many people find that just telling your own experience can make you feel better. 
-                    In fact, the care and listening of others are enough to help themselves.
-                </p>
+                <p id="Doctor01Comment "></p>
             </div>
-            <div class="Advice-Cloumn">
-                <div class="Client">
-                    <img src="image/Doctor02.jpeg">
-                    <div class="Clent-Info">
-                        <h4> Simon Sparrow <i class="fa-solid fa-user-doctor"></i></h4>
+            <div class="Advice-Cloumn ">
+                <div class="Client ">
+                    <img src="image/Doctor02.jpeg ">
+                    <div class="Clent-Info ">
+                        <h4> Simon Sparrow <i class="fa-solid fa-user-doctor "></i></h4>
                         <small>@DR_S_Sparrow_</small>
                     </div>
                 </div>
-                <p> Being plagued by depression can make you unable to take care of yourself. 
-                    But taking good care of your body step by step can help improve your mood,
-                    like try to get enough sleep and do some exercises.
-                </p>
-            </div>            <div class="Advice-Cloumn">
-                <div class="Client">
-                    <img src="image/Doctor03.jpeg">
-                    <div class="Clent-Info">
-                        <h4> Iris Marchant <i class="fa-solid fa-user-nurse"></i></h4>
+                <p id="Doctor02Comment "></p>
+            </div>
+
+            <div class="Advice-Cloumn ">
+                <div class="Client ">
+                    <img src="image/Doctor03.jpeg ">
+                    <div class="Clent-Info ">
+                        <h4> Iris Marchant <i class="fa-solid fa-user-nurse "></i></h4>
                         <small>@IrisMarchant0309</small>
                     </div>
                 </div>
-                <p>  Recording your mood diary can help you observe your mood changes,
-                     and you may also find that you have more beautiful moments than you think. 
-                </p>
+                <p id="Doctor03Comment "></p>
             </div>
         </div>
 
-        <div class="Advice-Row">
-            <div class="Advice-Cloumn">
-                <div class="Client">
-                    <img src="image/Doctor04.jpeg">
-                    <div class="Clent-Info">
-                        <h4>Richard Grimsdyke<i class="fa-solid fa-user-doctor"></i></h4>
+        <div class="Advice-Row ">
+            <div class="Advice-Cloumn ">
+                <div class="Client ">
+                    <img src="image/Doctor04.jpeg ">
+                    <div class="Clent-Info ">
+                        <h4>Richard Grimsdyke<i class="fa-solid fa-user-doctor "></i></h4>
                         <small>@Richard_Grimsdyke</small>
                     </div>
                 </div>
-                <p> The study found that enjoying natural time can help solve mental health problems, 
-                    such as relieve mild to moderate depression, 
-                     probably because it combines constant exercise and social interaction. 
-                </p>
+                <p id="Doctor04Comment "></p>
+
             </div>
-            <div class="Advice-Cloumn">
-                <div class="Client">
-                    <img src="image/Doctor05.jpeg">
-                    <div class="Clent-Info">
-                        <h4>Isobel Minster <i class="fa-solid fa-user-nurse"></i></h4>
+            <div class="Advice-Cloumn ">
+                <div class="Client ">
+                    <img src="image/Doctor05.jpeg ">
+                    <div class="Clent-Info ">
+                        <h4>Isobel Minster <i class="fa-solid fa-user-nurse "></i></h4>
                         <small>@IsobMinsterrr</small>
                     </div>
                 </div>
-                <p> Take time to take care of yourself, 
-                    such as doing something you like to do, 
-                    which can help you improve your quality of life. 
-                </p>
+                <p id="Doctor05Comment "></p>
+
             </div>
-            <div class="Advice-Cloumn">
-                <div class="Client">
-                    <img src="image/Doctor06.jpeg">
-                    <div class="Clent-Info">
-                        <h4>Donald Sinden <i class="fa-solid fa-user-doctor"></i></h4>
+            <div class="Advice-Cloumn ">
+                <div class="Client ">
+                    <img src="image/Doctor06.jpeg ">
+                    <div class="Clent-Info ">
+                        <h4>Donald Sinden <i class="fa-solid fa-user-doctor "></i></h4>
                         <small>@DonaldSinden__</small>
                     </div>
                 </div>
-                <p> Eating regularly and keeping your blood sugar stable can improve your mood and physical strength.
-                </p>
+                <p id="Doctor06Comment "></p>
+
             </div>
         </div>
+        <script src="Doctor01Comment.js "></script>
     </section>
 
     <!--MailingList-->
     <section>
-        <div id="MailingList">
-            <div class="Title_font">
+        <div id="MailingList ">
+            <div class="Title_font ">
                 <br>
                 <br>
                 <p>Communication</p>
                 <br>
                 <h1>Subscribe to Us.</h1>
             </div>
-            <div class="MailingList_Info">
+            <div class="MailingList_Info ">
                 <h1>Subscribe to Us for the latest news and updates.</h1>
                 <strong>Easily unsubscribe in one click from email subscriptions. Sign up today!</strong>
 
-        <form method="POST" name="sample">
-        <br>
-        <div class="EmailForm">
-            <label for="lastname">Last Name: *</label><br />
-            <input type="text" name="lastname" id="lastname" class="Form_Info" placeholder="Last Name" required>
-            <br>
-            <br>
-            <label for="email">Email: *</label><br/>
-            <input type="email" name="email" id="email" class="Form_Info" placeholder="Email" required>
-            <br>
-            <p>Enter your details to receive our latest news.</p>
-            <br>
-            <br>
-            <input type="button" name="add" value= "Subscribe!"  onclick="addClient();" class="SignupBtn"><hr>
-        </div>
-        <br>
-    
-                <class="btn-danger"></class>
-                <class="btn-primary"></class>
-                    <table id="tbl" class="table" border="1.5">
-                        <h2> Our Mailing List :)))</h2>
-                        <thead>
-                            <th style="width:30%;">Last Name</th> 
-                            <th style="width:40%;">Email</th>
-                            <th style="width:15%;">Unsubscribe</th>
-                            <th style="width:15%;">Update</th>
-                        </thead>
-                    </table>
-        </form>
-        </div>
+                <form method="POST " name="sample ">
+                    <br>
+                    <div class="EmailForm ">
+                        <label for="lastname ">Last Name: *</label><br />
+                        <input type="text " name="lastname " id="lastname " class="Form_Info " placeholder="Last Name " required>
+                        <br>
+                        <br>
+                        <label for="email ">Email: *</label><br/>
+                        <input type="email " name="email " id="email " class="Form_Info " placeholder="Email " required>
+                        <br>
+                        <p>Enter your details to receive our latest news.</p>
+                        <div class="newsletter ">
+                            <input class="newsletter-input " type="checkbox " value=" " id="flexCheckChecked " checked>
+                            <label class="newsletter-label " for="flexCheckChecked ">
+                                Receive our monthly newsletter.
+                            </label>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="Subscribe "></div>
+                        <input type="button " name="add " value="Subscribe! " onclick="addClient(); " id="SignupBtn ">
+                        <hr>
+                        <script src="AddMail.js "></script>
+                    </div>
+                    <br>
 
-    <!--https://www.encodedna.com/javascript/populate-json-data-to-html-table-using-javascript.htm-->
-        <input type='button' onclick='tableFromJson()' value='Create Table from JSON data' />
-        <p id="showData"></p>
+                    <class="btn-danger "></class>
+                        <class="btn-primary "></class>
 
-        <script>
-            let tableFromJson = () => {
-              // the json data.
-              const myBooks = [
-                {'Book ID': '1', 'Book Name': 'Challenging Times',
-                 'Category': 'Business', 'Price': '125.60'
-                },
-                {'Book ID': '2', 'Book Name': 'Learn JavaScript',
-                 'Category': 'Programming', 'Price': '56.00'
-                },
-                {'Book ID': '3', 'Book Name': 'Popular Science',
-                 'Category': 'Science', 'Price': '210.40'
-                }
-              ]
-          
-              // Extract value from table header. 
-              // ('Book ID', 'Book Name', 'Category' and 'Price')
-              let col = [];
-              for (let i = 0; i < myBooks.length; i++) {
-                for (let key in myBooks[i]) {
-                  if (col.indexOf(key) === -1) {
-                    col.push(key);
-                  }
-                }
-              }
-          
-              // Create table.
-              const table = document.createElement("table");
-          
-              // Create table header row using the extracted headers above.
-              let tr = table.insertRow(-1);                   // table row.
-          
-              for (let i = 0; i < col.length; i++) {
-                let th = document.createElement("th");      // table header.
-                th.innerHTML = col[i];
-                tr.appendChild(th);
-              }
-          
-              // add json data to the table as rows.
-              for (let i = 0; i < myBooks.length; i++) {
-          
-                tr = table.insertRow(-1);
-          
-                for (let j = 0; j < col.length; j++) {
-                  let tabCell = tr.insertCell(-1);
-                  tabCell.innerHTML = myBooks[i][col[j]];
-                }
-              }
-          
-              // Now, add the newly created table with json data, to a container.
-              const divShowData = document.getElementById('showData');
-              divShowData.innerHTML = "";
-              divShowData.appendChild(table);
-            }
-          </script>
-        </section>
+                            <table id="tbl " class="table " border="1.5 ">
+                                <h2> Welcome to Our Mailing List :)))</h2>
+                                <thead>
+                                    <th style="width:30%; ">Last Name</th>
+                                    <th style="width:40%; ">Email</th>
+                                    <th style="width:15%; ">Unsubscribe</th>
+                                    <th style="width:15%; ">Update</th>
+                                </thead>
+                            </table>
+                </form>
+            </div>
+    </section>
 
-  
+
 
     <!--Footer-->
-    <section id="Footer">
-        <img src="image/MentalHealthLogo.png" class="Footer-img">
-        <div class="Title_font">
+    <section id="Footer ">
+        <img src="image/MentalHealthLogo.png " class="Footer-img ">
+        <div class="Title_font ">
             <br>
             <br>
             <p>More Information</p>
             <br>
             <h1>Please contact us.</h1>
         </div>
-        <div class="Footer-Row">
-            <div class="Footer-Left">
+        <div class="Footer-Row ">
+            <div class="Footer-Left ">
                 <h1>Counselling Hours</h1>
                 <p>Welcome to make an appointment with us.</p>
-                <p><i class="fa-solid fa-clock"></i></i>Monday - Friday - 9am to 5pm </p>
-                <p><i class="fa-solid fa-clock"></i></i>Saturday and Sunday - 9am to 1pm </p>
+                <p><i class="fa-solid fa-clock "></i></i>Monday - Friday - 9am to 5pm </p>
+                <p><i class="fa-solid fa-clock "></i></i>Saturday and Sunday - 9am to 1pm </p>
             </div>
-            <div class="Footer-Right">
+            <div class="Footer-Right ">
                 <h1>Get in Touch</h1>
                 <p>We are happy to hear your opinion.</p>
-                <p>Phone 07885 340220 <i class="fa-solid fa-phone"></i></i></p>
-                <p>MentalHelp.Depression@gmail.com <i class="fa-solid fa-paper-plane"></i></i></p>
-                <p>Queen's college, Rainmill, University of Durham DH1 3LH<i class="fa-solid fa-location-dot"></i></i></p>
+                <p>Phone 07885 340220 <i class="fa-solid fa-phone "></i></i>
+                </p>
+                <p>MentalHelp.Depression@gmail.com <i class="fa-solid fa-paper-plane "></i></i>
+                </p>
+                <p>Queen's college, Rainmill, University of Durham DH1 3LH<i class="fa-solid fa-location-dot "></i></i>
+                </p>
             </div>
         </div>
-        <div class="Social-Link">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-whatsapp"></i>
+        <div class="Social-Link ">
+            <i class="fa-brands fa-instagram "></i>
+            <i class="fa-brands fa-facebook "></i>
+            <i class="fa-brands fa-twitter "></i>
+            <i class="fa-brands fa-whatsapp "></i>
             <p>Copyright</p>
             <p>© 2022 MentalHelp.Depression. All Rights Reserved.</p>
         </div>
-        </section>
+    </section>
+    <script>
+        projection = ƒ(n)
 
+        import {
+            d3,
+            map
+        } from "@d3/world-map "
+    </script>
+
+    <script src="Javascript.js "></script>
 </body>
+
 </html>

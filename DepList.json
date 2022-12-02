@@ -1,0 +1,122 @@
+[{
+        "Type": "Major Depression (Major Depressive Disorder)",
+        "Description": "Most days of the week, you feel depressed most of the time.",
+        "Symptoms1": "Loss of interest in activities",
+        "Symptoms2": "Weight changing",
+        "Symptoms3": "Trouble to get sleep or feeling sleepy all the time",
+        "Symptoms4": "Feeling restless, tired, worthless, or guilty",
+        "Symptoms5": "Thoughts of suicide"
+
+
+    },
+    {
+        "Type": "Anxious distress",
+        "Description": "You will feel nervous and restless most of the time.",
+        "Symptoms1": "Trouble concentrating caused by the fear",
+        "Symptoms2": "Breathing rapidly",
+        "Symptoms3": "Having an increased heart rate",
+        "Symptoms4": "Having a sense of impending danger, panic or doom",
+        "Symptoms5": "Sweating",
+        "Symptoms6": "Feeling weak or tired"
+    },
+    {
+        "Type": "Melancholy",
+        "Description": "You feel extremely sad and lose interest in activities you used to enjoy.Even when good things happen, you feel bad, especially during the morning.",
+        "Symptoms1": "Loss of interest in activities",
+        "Symptoms2": "Weight Loss",
+        "Symptoms3": "Poor-quality sleep",
+        "Symptoms4": "Feeling empty",
+        "Symptoms5": "Thoughts of suicide"
+
+    },
+    {
+        "Type": "Agitated",
+        "Description": "Most of the time you will feel uneasy.",
+        "Symptoms1": "Talk a lot",
+        "Symptoms2": "Unexplained movement",
+        "Symptoms3": "Fiddling with hands ",
+        "Symptoms4": "Walking up and down the room",
+        "Symptoms5": "Acting on impulse"
+
+    },
+    {
+        "Type": "Persistent Depressive Disorder",
+        "Description": "Having depression lasts for 2 years or longer.",
+        "Symptoms1": "Sleeping too much or too little",
+        "Symptoms2": "Appetite change as weight keep changing",
+        "Symptoms3": "Low self-esteem",
+        "Symptoms4": "Loss of interest",
+        "Symptoms5": "Feeling hopeless"
+
+    },
+    {
+        "Type": "Bipolar Disorder (Mania depression)",
+        "Description": ["Mood episodes range from extremely high energy with high moods to low depressed periods."],
+        "Symptoms1": "Being easily distracted",
+        "Symptoms2": "Lost control of Yourself",
+        "Symptoms3": "Feeling delighted, elated or overjoyed",
+        "Symptoms4": "Not feeling like sleeping",
+        "Symptoms5": "Feeling full of energy"
+
+    },
+    {
+        "Type": "Seasonal Affective Disorder (SAD)",
+        "Description": "Most often happens during the winter months, when the days grow short and you get less and less sunlight.",
+        "Symptoms1": "A persistent low mood",
+        "Symptoms2": "Feeling tired",
+        "Symptoms3": "Loss of interest",
+        "Symptoms4": "Tearfulness",
+        "Symptoms5": "Becoming less sociable"
+
+    },
+    {
+        "Type": "Psychotic Depression",
+        "Description": "Hallucinations (seeing or hearing things that aren't there)",
+        "Symptoms1": "Delusions (false beliefs)",
+        "Symptoms2": "Paranoia (falsely thinking that other people are trying to hurt you)",
+        "Symptoms3": "Psychomotor agitation(not being able to relax)",
+        "Symptoms4": "Psychomotor retardation(movements slow down)",
+        "Symptoms5": "Thoughts of suicide"
+
+    },
+    {
+        "Type": "Peripartum Depression (Postpartum Depression)",
+        "Description": "Peripartum depression may exist in women who experience significant depressive episodes in the weeks and months following giving birth. In the peripartum period, about 1 in 10 men also experience depression.",
+        "Symptoms1": "Sadness",
+        "Symptoms2": "Feeling overwhelmed",
+        "Symptoms3": "Tearful",
+        "Symptoms4": "Poor qualtiy sleep",
+        "Symptoms5": "Reduced concentration"
+
+    },
+    {
+        "Type": "Premenstrual Dysphoric Disorder (PMDD)",
+        "Description": "When their period first starts, women with PMDD experience depression and other symptoms.",
+        "Symptoms1": "Loss of interest in activities once enjoyed",
+        "Symptoms2": "Appetite Change",
+        "Symptoms3": "Moodiness",
+        "Symptoms4": "Insomnia",
+        "Symptoms5": "Feeling overwhelmed"
+
+    },
+    {
+        "Type": "'Situational' Depression",
+        "Description": "When you're struggling to control a stressful situation in your life, you may feel depressed.",
+        "Symptoms1": "Constant worrying",
+        "Symptoms2": "Lack of enjoyment in normal activities",
+        "Symptoms3": "Disinterest in food",
+        "Symptoms4": "Sadness",
+        "Symptoms5": "Trouble to sleep"
+
+    },
+    {
+        "Type": "Atypical Depression",
+        "Description": "This sort of depression is distinct from the enduring melancholy of ordinary depression. It's regarded as a specifier that characterises a constellation of depressed symptoms. If you suffer from atypical depression, a happy occasion may momentarily lift your spirits.",
+        "Symptoms1": "Sleeping more than usual",
+        "Symptoms2": "Feeling of heaviness in your arms and legs",
+        "Symptoms3": "Oversensitive to criticism",
+        "Symptoms4": "Feelings of hopelessness",
+        "Symptoms5": "Thoughts of suicide"
+
+    }
+]

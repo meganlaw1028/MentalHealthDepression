@@ -1,0 +1,3 @@
+
+let WhatisDepression = "Major depressive disorder, sometimes known as depression,  is a serious medical condition that frequently affects people's feelings,  thoughts, and behaviours. The main symptom of depression is long-term persistent depression, which will affect the daily life of patients. Mild depression can only be depressed, which may not affect daily life, but it may make patients feel difficult and meaningless. In the most serious case, depression can threaten life and make patients suicidal.";
+document.getElementById("WhatisDepression").innerHTML = WhatisDepression;
