@@ -7,19 +7,14 @@ async function MakeChart() {
     await getData();
     const ctx = document.getElementById('myChart');
     const myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: xlabels,
             datasets: [{
                 label: 'Percentage of Young people experiencing feelings of depression in the United Kingdom 2009-2021',
                 data: yaxis,
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(255, 150, 132, 0.7)'
                 ],
 
                 borderWidth: 1,
@@ -27,6 +22,7 @@ async function MakeChart() {
             }]
         },
         options: {
+            
             scales: {
                 y: {
                     ticks: {

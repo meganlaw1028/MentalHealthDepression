@@ -18,6 +18,8 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- bootstrap for -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
     <!-- Add Icon - fontswesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -27,10 +29,14 @@
     <!-- add D3 - CDN -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'>
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js'>
     <!-- add Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>
     <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+
 </head>
 
 <body>
@@ -38,25 +44,6 @@
     <div id="Navbar">
         <nav>
             <ul class="Navbar_Menu">
-                <!-- Navbar Section 
-                <form id="SearchingWeb" role="search">
-                    <input type="search" id="search" placeholder="Search..." aria-label="Search through site content">
-                </form>
-                <script>
-                    const f = document.getElementById('SearchingWeb');
-                    const q = document.getElementById('query');
-                    const google = 'https://www.google.com/search?q=site%3A+';
-                    const site = 'pagedart.com';
-
-                    function submitted(event) {
-                        event.preventDefault();
-                        const url = google + site + '+' + q.value;
-                        const win = window.open(url, '_blank');
-                        win.focus();
-                    }
-
-                    f.addEventListener('submit', submitted);
-                </script>-->
                 <li class="Navbar_Info"><a href="#HOME" id="Home_page">HOME</a></li>
                 <li class="Navbar_Info"><a href="#Depression" id="Depression_page">ABOUT</a></li>
                 <li class="Navbar_Info"><a href="#LargeChart" id="LargeChart_page">RECENT DATA</a></li>
@@ -121,16 +108,6 @@
                 <br><br>
                 <p>Happy Value: <span id="RangeValue"></span>/100</p>
             </div>
-
-            <script>
-                var slider = document.getElementById("RangeBar");
-                var output = document.getElementById("RangeValue");
-                output.innerHTML = slider.value;
-
-                slider.oninput = function() {
-                    output.innerHTML = this.value;
-                }
-            </script>
         </div>
         </div>
         <div class="Depression">
@@ -141,12 +118,10 @@
                 </div>
                 <div class="Depression-Text">
                     <p id="WhatisDepression"></p>
-                    <script src="WhatisDepression.js"></script>
+                    
                 </div>
                 <div class="Depression-img">
                     <img src="" id="DepressionBlue">
-                    <script src="DepressionBlue.js">
-                    </script>
                 </div>
             </div>
 
@@ -157,7 +132,6 @@
                 </div>
                 <div class="Depression-Text">
                     <list id="Symptoms_of_Depression"></list>
-                    <script src="Symptoms_of_Depression.js"></script>
                 </div>
                 <div class="Depression-img">
                     <img src="image/StressOil.jpeg">
@@ -184,7 +158,6 @@
             <div class="input-group">
                 <input type="text" id="SearchingInput" onkeyup="Searchlist()" class="form-control rounded" placeholder="Search for names" aria-label="Search" aria-describedby="search-addon" />
                 <button type="button" class="SearchButton">search</button>
-                <script src="SearchingList.js"></script>
             </div>
             <!--https://www.webmd.com/depression/guide/depression-types#091e9c5e80074279-3-7-->
             <!-- <table class="table align-middle mb-0 bg-white"> https://mdbootstrap.com/docs/standard/data/tables/ -->
@@ -196,14 +169,14 @@
                         <th style="width:40%;">Depression Symptoms</th>
                     </tr>
                 </thead>
-                <tbody id="StaffRecordTable">
+                <tbody id="SymptomsTable">
                     <!-- Prodcuts from javascript file in here. -->
                 </tbody>
             </table>
-            <script src="StaffRecord.js"></script>
             <br><br>
         </div>
         <br>
+        <script src="WhatisDepression.js"></script>
     </section>
     <!--LargeChart-->
     <section id="LargeChart">
@@ -216,14 +189,26 @@
         </div>
 
         <div>
+            <h1 style="text-align: center; color: rgb(22, 22, 113); font-family: Georgia, 'Times New Roman', Times, serif;">
+                Percentage of Young people experiencing feelings of depression in the United Kingdom 2009-2021</h1>
             <canvas id="myChart"></canvas>
             <script src="BarChart.js"></script>
         </div>
         <br>
+        <h1 style="text-align: center; color: rgb(22, 22, 113); font-family: Georgia, 'Times New Roman', Times, serif;">
+            Depression Rates by Country 2022</h1>
         <br>
         <div>
-            <canvas id="myMap"></canvas>
-            <script src="Map.js"></script>
+            <canvas id="myMap" width="1000" height="7000"></canvas>
+            <script src="myMap.js"></script>
+        </div>
+        <br>
+        <br>
+        <div>
+            <h1 style="text-align: center; color: rgb(22, 22, 113); font-family: Georgia, 'Times New Roman', Times, serif;">
+                World Map for Information:)</h1>
+            <svg width="1000" height="700"></svg>
+            <script src="NewMap.js" id="World"></script>
         </div>
         <br>
         <br>
@@ -294,21 +279,21 @@
             <!--https://www.encodedna.com/javascript/populate-json-data-to-html-table-using-javascript.htm-->
             <p>Customers can find information about our employees on our website. Not all employees; only those who have consented to let consumers contact them in advance and have an opportunity to offer suggestions or complaints about their service. We
                 try to give you a huge quantity of information, in order to give you a more true picture of our company, especially the people you will be speaking with if you decide to have any counselling services, so you feel more comfortable communicating
-                with us, our wonderful enthusiastic staff. We simply offer the employees details with their last name, business email, position of duty, and date of employment in order to verify our staff members' identities and current employment status
+                with us, our wonderful enthusiastic staff. We simply offer the employees details with their last name, business email and position of duties in order to verify our staff members' identities and current employment status
                 to the general public. Other details will be withheld in accordance with the Privacy Policy. </p>
 
-            <strong> If you want to see the information, just double-click the button!</strong>
+            <strong> If you do not want to see the information, just click the button!</strong>
 
             <input type='button' id="StaffListBtn" value='Our Staff Data' />
             <br>
             <table id="MailingListTable">
-                <thead>
+                <thead style="text-align:center;">
                     <tr>
-                        <th>ID</th>
-                        <th>Image</th>
-                        <th>Last Name</th>
-                        <th>Business Email</th>
-                        <th>Position</th>
+                        <th style="width:5%;">ID</th>
+                        <th style="width:10%;">Image</th>
+                        <th style="width:20%;">Last Name</th>
+                        <th style="width:35%;">Business Email</th>
+                        <th style="width:30%;">Position</th>
                     </tr>
                 </thead>
                 <tbody id="MailingListTabletr">
@@ -498,14 +483,6 @@
             <p>© 2022 MentalHelp.Depression. All Rights Reserved.</p>
         </div>
     </section>
-    <script>
-        projection = ƒ(n)
-
-        import {
-            d3,
-            map
-        } from "@d3/world-map"
-    </script>
 
     <script src="Javascript.js"></script>
 </body>

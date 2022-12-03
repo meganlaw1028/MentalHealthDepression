@@ -1106,9 +1106,6 @@ h2 {
     display: table;
 }
 
-table {
-    background: #c7d0e1;
-}
 
 @media screen and (max-width: 900px) {
     #StaffRecord {
@@ -1156,3 +1153,83 @@ table {
     max-width: 50px;
     max-height: 50px;
 }
+
+#MailingListTable{
+    background: #ADA996; 
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom: #3c4043;
+}   
+#MailingListTabletr h1{
+    font-size: 22px;
+}
+#MailingListTabletr img{
+    border-radius: 50%;
+}
+#MailingListTabletr h2{
+    font-size: 20px;
+}
+#MailingListTabletr h3{
+    font-size: 20px;
+}
+#MailingListTabletr h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#world{
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.sphere {
+    fill: #8686ea;
+  }
+  
+  .country {
+    fill: lightgreen;
+    stroke: black;
+    stroke-opacity: 0.1;
+    stroke-width: 0.05px;
+  }
+  
+  .country:hover {
+    fill: red;
+  }
+
+
+#myMap  body {
+    background-color:lightgray;
+   }
+#myMap h1, h3, p{
+     text-align:center;
+   }
+#myMap .axis {
+       font: 15px Arial, sans-serif;
+   }
+#myMap .graph-svg-component {
+     background-color:white;
+     display: block;
+     margin: auto;
+   }
+#myMap .axis path, .axis line {
+       fill: none;
+       stroke: #3A3A3A;
+   }
+   
+   /*
+    * Footer
+    */
+#myMap a:link    {color:orangered;  text-decoration:none}
+#myMap a:visited {color:orangered; text-decoration:none}
+#myMap a:hover   {color:red; text-decoration:underline}
+   
+ #myMap .tableFooter{
+     margin-top: 15px;
+   }
+#myMap .footerSvg{
+     width: 32px;
+   }

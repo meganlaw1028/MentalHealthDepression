@@ -1,5 +1,5 @@
 const xMap = [];
-const yMap = [];
+const yCountry = [];
 
 MakeChart();
 
@@ -7,12 +7,12 @@ async function MakeChart() {
     await getData();
     const ctx = document.getElementById('myMap');
     const myMap = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
-            labels: xMap,
+            labels: yCountry,
             datasets: [{
-                label: 'Percentage of Young people experiencing feelings of depression in the United Kingdom 2009-2021',
-                data: yMap,
+                label: "Depression Rates by Country 2022",
+                data: xMap,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -22,13 +22,24 @@ async function MakeChart() {
                     'rgba(255, 159, 64, 0.2)'
                 ],
 
-                borderWidth: 1,
+                borderWidth: 1.5,
                 borderColor: 'rgba(105, 149, 132, 0.8)'
             }]
         },
         options: {
+            indexAxis: 'y',
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Depression Rates by Country 2022',
+                    padding: {
+                        top: 10,
+                        bottom: 30
+                    }
+                }
+            },
             scales: {
-                y: {
+                x: {
                     ticks: {
                         // Include a dollar sign in the ticks
                         callback: function(value, index, ticks) {
@@ -37,8 +48,9 @@ async function MakeChart() {
                     }
                 }
             }
+            }
         }
-    })
+    )
 }
 
 async function getData() {
@@ -49,9 +61,9 @@ async function getData() {
     chartTable.forEach(chartTableRow => {
         const chartTableColumns = chartTableRow.split(',');
         const country = chartTableColumns[0];
-        xMap.push(country);
+        yCountry.push(country);
         const prevalence = chartTableColumns[1];
-        yMap.push((prevalence));
+        xMap.push((prevalence));
         const cases = chartTableColumns[2];
         const pop2022 = chartTableColumns[3];
         console.log(country, prevalence, cases, pop2022);
@@ -60,3 +72,4 @@ async function getData() {
 }
 
 //"country","prevalence","cases","pop2022"
+

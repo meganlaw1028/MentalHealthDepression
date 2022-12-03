@@ -8,11 +8,11 @@ fetch("MailingList.json")
         for (let product of products) {
             out += `
          <tr>
-            <td><h1>${product.id}</h1></td>
-            <td> <img src='${product.image}' class="StaffIcon"> </td>
-            <td><h2>${product.LastName}</h2></td>
-            <td><h3>${product.Email}</h3></td>
-            <td><h4>${product.Position}</h4></td>
+            <td style="width:5%;"><h1>${product.id}</h1></td>
+            <td style="width:10%;"> <img src='${product.image}' class="StaffIcon"> </td>
+            <td style="width:20%;"><h2>${product.LastName}</h2></td>
+            <td style="width:35%;"><h3>${product.Email}</h3></td>
+            <td style="width:30%;"><h4>${product.Position}</h4></td>
             </td>
          </tr>
       `;

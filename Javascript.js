@@ -13,3 +13,4 @@ NavButton.onclick = function() {
         Menu.src = "image/menu.png";
     }
 };
+
