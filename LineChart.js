@@ -38,7 +38,7 @@ async function MakeChart() {
 }
 
 async function getData() {
-    const response = await fetch('Depression-in-uk.csv');
+    const response = await fetch('DataSet/Depression-in-uk.csv');
     const data = await response.text();
 
     const LineTable = data.split('\n').slice(2);

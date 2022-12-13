@@ -55,7 +55,7 @@ async function MakeChart() {
 }
 
 async function DataGet() {
-    const response = await fetch('DepressionRates.csv');
+    const response = await fetch('DataSet/DepressionRates.csv');
     const data = await response.text();
 
     const BarTable = data.split('\n').slice(1);;

@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function(){
 //Symptoms Table of Depression
 
 document.addEventListener("DOMContentLoaded", function(){
-        fetch("DepList.json")
+        fetch("DataSet/DepList.json")
     .then(function(response) {
         return response.json();
         })
@@ -117,6 +117,29 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     });
 
+//Searching function for Symptoms Table of Depression
+function Searchlist() {
+    // Declare variables 
+    
+    var input = document.getElementById("SearchingInput");
+    var filter = input.value.toUpperCase();
+    var table = document.getElementById("TypeOfDescription");
+    var tr = table.getElementsByTagName("tr");
+    var td, i, txtValue;
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+};
 
 //MouseDown for StaffList
     function mouseDown() {
@@ -132,6 +155,38 @@ document.addEventListener("DOMContentLoaded", function(){
     //function SeekOver(){alert("Call 0800 652 2863 for free if you need help immediately.");}
     //NeedHelp.addEventListener("mouseover", SeekOver);
 
+
+//Staff List
+fetch("DataSet/EmployeeList.json")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(products) {
+        let placeholder = document.querySelector("#MailingListTabletr");
+        let out = "";
+        for (let product of products) {
+            out += `
+         <tr>
+            <td style="width:5%;"><h1>${product.id}</h1></td>
+            <td style="width:10%;"> <img src='${product.image}' class="StaffIcon"> </td>
+            <td style="width:20%;"><h2>${product.LastName}</h2></td>
+            <td style="width:35%;"><h3>${product.Email}</h3></td>
+            <td style="width:30%;"><h4>${product.Position}</h4></td>
+            </td>
+         </tr>
+      `;
+        }
+        placeholder.innerHTML = out
+    });
+
+StaffListBtn.addEventListener("click", () => {
+    let close = document.getElementById("MailingListTable");
+    if (close.classList.contains("d-none")) {
+        (close.classList.remove("d-none"));
+    } else {
+        close.classList.add("d-none");
+    }
+});
 
 //Doctor01 Comments
 document.addEventListener("DOMContentLoaded", function(){
@@ -229,38 +284,3 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     
     
-    // from https://getbootstrap.com/docs/5.2/components/alerts/
-    
-    const alertPlaceholder = document.getElementById('Subscribe')
-    
-    const alert = (message, type) => {
-        const wrapper = document.createElement('div')
-        wrapper.innerHTML = [
-            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-            `   <div>${message}</div>`,
-            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-            '</div>'
-        ].join('')
-    
-        alertPlaceholder.append(wrapper)
-    }
-    
-    const SignupAlert = document.getElementById('SignupBtn')
-    if (SignupAlert) {
-        SignupAlert.addEventListener('click', () => {
-            alert('Thank you for subscribing to the Metal Help newsletter.', 'success')
-        })
-    }
-    
-    alertPlaceholder.addEventListener("click", () => {
-        let closealert = document.getElementById("Subscribe");
-        if (closealert.classList.contains("d-none")) {
-            (closealert.classList.remove("d-none"));
-        } else {
-            closealert.classList.add("d-none");
-        }
-    });
-    
-
-
-  
