@@ -17,7 +17,7 @@ async function MakeChart() {
                     'rgba(255, 150, 132, 0.7)'
                 ],
 
-                borderWidth: 1,
+                borderWidth: 2,
                 borderColor: 'rgba(105, 149, 132, 0.8)'
             }]
         },

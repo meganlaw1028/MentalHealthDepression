@@ -79,7 +79,7 @@
             var input, filter, table, tr, td, i, txtValue;
             input = document.getElementById("SearchingInput");
             filter = input.value.toUpperCase();
-            table = document.getElementById("StaffRecord");
+            table = document.getElementById("TypeOfDescription");
             tr = table.getElementsByTagName("tr");
         
             // Loop through all table rows, and hide those who don't match the search query
