@@ -107,7 +107,7 @@ nav ul li a:hover {
     color: rgb(89, 5, 5);
 }
 
-.HelpButton {
+#HelpButton {
     list-style: none;
     margin: 20px 20px;
     background: linear-gradient(45deg, #ff8c8c, #ff77cd);
@@ -122,7 +122,7 @@ nav ul li a:hover {
     font-family: 'Abril Fatface', cursive;
 }
 
-.HelpButton:hover {
+#HelpButton:hover {
     text-decoration: none;
     transform: translateY(-20px);
 }
@@ -568,7 +568,7 @@ nav ul li a:hover {
     grid-auto-flow: repeat(auto-fill, minmax(150px, 1fr));
 }
 
-#myMap {
+#BarChart {
     background-color: rgba(248, 246, 236, 0.8);
     margin-left: 10%;
     margin-right: 10%;
@@ -1212,21 +1212,21 @@ h2 {
   }
 
 
-#myMap  body {
+#BarChart  body {
     background-color:lightgray;
    }
-#myMap h1, h3, p{
+#BarChart h1, h3, p{
      text-align:center;
    }
-#myMap .axis {
+#BarChart .axis {
        font: 15px Arial, sans-serif;
    }
-#myMap .graph-svg-component {
+#BarChart .graph-svg-component {
      background-color:white;
      display: block;
      margin: auto;
    }
-#myMap .axis path, .axis line {
+#BarChart .axis path, .axis line {
        fill: none;
        stroke: #3A3A3A;
    }
@@ -1234,13 +1234,13 @@ h2 {
    /*
     * Footer
     */
-#myMap a:link    {color:orangered;  text-decoration:none}
-#myMap a:visited {color:orangered; text-decoration:none}
-#myMap a:hover   {color:red; text-decoration:underline}
+#BarChart a:link    {color:orangered;  text-decoration:none}
+#BarChart a:visited {color:orangered; text-decoration:none}
+#BarChart a:hover   {color:red; text-decoration:underline}
    
- #myMap .tableFooter{
+ #BarChart .tableFooter{
      margin-top: 15px;
    }
-#myMap .footerSvg{
+#BarChart .footerSvg{
      width: 32px;
    }

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Kwan Ling Megan LAW">
+    <meta name="Description" content="This is a page about depression by a mental health group.">
     <title>Megan - Mental Health</title>
     <!-- link for CSS file -->
     <link rel="stylesheet" href="style.css">
@@ -52,13 +54,12 @@
                 <li class="Navbar_Info"><a href="#Advice" id="Advice_page">SELF HELP</a></li>
                 <li class="Navbar_Info"><a href="#Footer" id="Footer_page">MORE INFO</a></li>
             </ul>
-            <button class="HelpButton"> <a href="#Counselling"  > Seek Help NOW </a></button>
+            <button id="HelpButton"> <a href="#Counselling"> Seek Help NOW </a></button>
         </nav>
     </div>
 
     <div id="NavButton">
         <img src="image/menu.png" id="Menu">
-        <script src="menu.js"></script>
     </div>
 
 <!---HOME Section - Content Page -->
@@ -67,7 +68,7 @@
             <img src="" id="logo">
             <script src="home_logo.js"></script>
             <h1> Welcome to Mental Help. </h1>
-            <strong>Do you need any help with your depression?</strong>
+            <strong id="NeedHelp">Do you need any help with your depression?</strong>
             <br><br>
             <p> Our knowledge and recommendations about mental health are supported by data and real-life experiences. Learn how to maintain your mental health and prevent the occurrence of mental disorders.</p>
             <div class="content-button">
@@ -143,7 +144,7 @@
             </div>
         <br>
     
-        <script src="WhatisDepression.js"></script>
+        <script src="SearchingList.js"></script>
     </section>
 
     <!--LargeChart-->
@@ -157,23 +158,23 @@
             <h1 style="text-align: center; color: rgb(22, 22, 113); font-family: Georgia, 'Times New Roman', Times, serif;">
                 Percentage of Young people experiencing feelings of depression in the United Kingdom 2009-2021</h1>
             <canvas id="myChart"></canvas>
-            <script src="BarChart.js"></script>
+            <script src="LineChart.js"></script>
         </div>
         <br>
         <h1 style="text-align: center; color: rgb(22, 22, 113); font-family: Georgia, 'Times New Roman', Times, serif;">
             Depression Rates by Country 2022</h1>
         <br>
         <div>
-            <canvas id="myMap" width="1000" height="7000"></canvas>
-            <script src="myMap.js"></script>
+            <canvas id="BarChart" width="1000" height="7000"></canvas>
+            <script src="BarChart.js"></script>
         </div>
         <br>
         <br>
         <div>
             <h1 style="text-align: center; color: rgb(22, 22, 113); font-family: Georgia, 'Times New Roman', Times, serif;">
-                World Map for Information:)</h1>
-            <svg width="1000" height="700"></svg>
-            <script src="NewMap.js" id="World"></script>
+                Addition: World Map (for Information:))</h1>
+            <svg style="margin-left: 20%;margin-right: 20%" width="1000" height="550"></svg>
+            <script src="NewMap.js"></script>
         </div>
         <br>
         <br>
@@ -247,9 +248,9 @@
                 with us, our wonderful enthusiastic staff. We simply offer the employees details with their last name, business email and position of duties in order to verify our staff members' identities and current employment status
                 to the general public. Other details will be withheld in accordance with the Privacy Policy. </p>
 
-            <strong> If you want to see the information of our staff, just click the button!</strong>
+            <strong id="InfoTitle" > If you want to see the information of our staff, just click the button!</strong>
 
-            <input type='button' id="StaffListBtn" value='Our Staff Data'/>
+            <input type='button' id="StaffListBtn" onmousedown="mouseDown()" onmouseup="mouseUp()" value='Our Staff Data'/>
             <br>
             <table id="MailingListTable" class="d-none">
                 <thead style="text-align:center;">
@@ -268,7 +269,7 @@
             </table>
             <br>
         </div>
-        <script src=" NewMailingList.js"></script>
+        <script src="StaffList.js"></script>
     </section>
 
     <!--Advice-->
@@ -369,7 +370,7 @@
                 <form method="POST" name="sample">
                     <br>
                     <div class="EmailForm">
-                        <label for="lastname">Last Name: *</label><br />
+                        <label for="lastname">Last Name: *</label><br/>
                         <input type="text" name="lastname" id="lastname" class="Form_Info" placeholder="Last Name" required>
                         <br>
                         <br>

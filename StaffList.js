@@ -1,4 +1,6 @@
-fetch("MailingList.json")
+// Mailing list for staff. 
+
+fetch("EmployeeList.json")
     .then(function(response) {
         return response.json();
     })
